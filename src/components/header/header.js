@@ -1,35 +1,29 @@
-
-import { Button, Grid } from '@material-ui/core';
-
 import { makeStyles } from '@material-ui/core/styles';
+import { Container, Grid, Typography } from '@material-ui/core';
+
+import Navbar from '../navbar/navbar';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    border: 'solid 1px',
   },
-  menuItems: {
-    display: 'inlineBlock',
-    position: 'center',
-  }
+  typography: {
+    alignItems: 'center',
+  },
 }))
 
 const Header = () => {
-  
+
   const classes = useStyles();
 
 
   return (
-    <Grid
-    className={classes.root}
-    container
-    direction="row"
-    justify="center"
-    alignItems="center"
-    >
-  <Button>Residential</Button>
-  <Button>Employment</Button>
-  <Button>Family</Button>
-  <Button>Education</Button>
+    <Grid container spacing={3} alignItems="center" className={classes.root}>
+      <Grid item xs={12}>
+        <Typography variant="h2"  className={classes.typography}>CPTS Resource Page</Typography>
+      </Grid>
     </Grid>
   )
 }
