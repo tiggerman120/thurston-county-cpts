@@ -1,5 +1,5 @@
 import { Grid } from '@material-ui/core';
-import About from './components/about/about';
+import About from './components/contact/contact';
 import Aside from './components/aside/aside';
 import Education from './components/education/education';
 import Employment from './components/employment/employment';
@@ -20,7 +20,21 @@ import {
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: 'beige',
+    background: 'linear-gradient(45deg, #358302 30%, #1D4701 90%)',
+    alignText: 'center',
+  },
+  header: {
+    textAlign: 'center',
+    
+  },
+  navbar: {
+
+  },
+  aside: {
+    backgroundColor: 'lightGrey',
+  },
+  home: {
+    backgroundColor: 'lightGrey',
   },
   residential: {
     border: 'solid 1px',
@@ -32,19 +46,26 @@ function App() {
   return (
     <Grid container spacing={3} className={classes.root}>
       <Router>
-        <Grid item xs={12}>
+        <Grid item xs={12} className={classes.header}>
           <Header />
         </Grid>
-        <Grid item xs={12} justify="flex-end">
-        <Navbar />
+        <Grid item xs={12} className={classes.navbar}>
+          <Navbar />
+        </Grid>
+        <Grid item xs={3} className={classes.aside}>
+          <Aside />
         </Grid>
         <Switch>
-          {/* If the current URL is /about, this route is rendered
-            while the rest are ignored */}
-          <Route path="/residential">
-            <Grid item xs={3}>
-              <Aside />
+          <Route exact path="/">
+            <Grid item xs={9} className={classes.home}>
+              <Main />
             </Grid>
+            <Grid item xs={12}>
+              <Footer />
+            </Grid>
+          </Route>
+          <Route path="/residential">
+            
             <Grid item xs={9} className={classes.residential}>
               <Residential />
             </Grid>
@@ -52,14 +73,8 @@ function App() {
               <Footer />
             </Grid>
           </Route>
-
-          {/* Note how these two routes are ordered. The more specific
-            path="/contact/:id" comes before path="/contact" so that
-            route will render when viewing an individual contact */}
           <Route path="/employment">
-            <Grid item xs={3}>
-              <Aside />
-            </Grid>
+            
             <Grid item xs={9} className={classes.residential}>
               <Employment />
             </Grid>
@@ -68,9 +83,7 @@ function App() {
             </Grid>
           </Route>
           <Route path="/family">
-          <Grid item xs={3}>
-              <Aside />
-            </Grid>
+            
             <Grid item xs={9} className={classes.residential}>
               <Family />
             </Grid>
@@ -79,9 +92,7 @@ function App() {
             </Grid>
           </Route>
           <Route path="/education">
-          <Grid item xs={3}>
-              <Aside />
-            </Grid>
+            
             <Grid item xs={9} className={classes.residential}>
               <Education />
             </Grid>
@@ -90,9 +101,7 @@ function App() {
             </Grid>
           </Route>
           <Route path="/about">
-          <Grid item xs={3}>
-              <Aside />
-            </Grid>
+            
             <Grid item xs={9} className={classes.residential}>
               <About />
             </Grid>
@@ -101,12 +110,6 @@ function App() {
             </Grid>
           </Route>
 
-          {/* If none of the previous routes render anything,
-            this route acts as a fallback.
-
-            Important: A route with path="/" will *always* match
-            the URL because all URLs begin with a /. So that's
-            why we put this one last of all */}
           <Route path="/">
             <Grid item xs={3} justify="left" alignItems="left">
               <Aside />

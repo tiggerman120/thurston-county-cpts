@@ -8,9 +8,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     border: 'solid 1px',
+    alignContent: 'center',
   },
   typography: {
-    alignItems: 'center',
+   textAlign: 'center',
   },
 }))
 
@@ -20,9 +21,10 @@ const Header = () => {
 
 
   return (
-    <Grid container spacing={3} alignItems="center" className={classes.root}>
+    <Grid container spacing={3} justify="center"  className={classes.root}>
       <Grid item xs={12}>
-        <Typography variant="h2"  className={classes.typography}>CPTS Resource Page</Typography>
+        <img src="../../assets/cpts-logo.jpg" alt="" ></img>
+        <Typography variant="h2" color="textPrimary" className={classes.typography}>CPTS Resource Page</Typography>
       </Grid>
     </Grid>
   )

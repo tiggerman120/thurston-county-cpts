@@ -1,10 +1,12 @@
-
+import { Container } from '@material-ui/core';
 
 const Residential = () => {
 
 
   return (
-    <h1>Residential Proof of life</h1>
+    <Container>
+      <h1>Residential Proof of life</h1>
+    </Container>
   )
 }
 
