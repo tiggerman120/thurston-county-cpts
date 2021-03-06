@@ -1,14 +1,8 @@
 import { makeStyles } from '@material-ui/core/styles';
-import Employment from '../employment/employment';
-import { Container, Grid, List, ListItem, Typography } from '@material-ui/core';
-import Residential from '../residential/residential';
+import { Grid, List, ListItem, Typography } from '@material-ui/core';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {

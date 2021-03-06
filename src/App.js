@@ -1,4 +1,4 @@
-import { Container, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import About from './components/about/about';
 import Aside from './components/aside/aside';
 import Education from './components/education/education';
@@ -15,7 +15,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
