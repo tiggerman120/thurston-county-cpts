@@ -14,7 +14,10 @@ const Footer = () => {
   return (
     <Grid container spacing={3} className={classes.root}>
       <Grid item xs={12}>
-        <Typography>Footer data goes here</Typography>
+        <Typography>CPTS data goes here</Typography>
+      </Grid>
+      <Grid item xs={12}>
+        <Typography>Web Design by Garrett Cintron</Typography>
       </Grid>
     </Grid>
   )

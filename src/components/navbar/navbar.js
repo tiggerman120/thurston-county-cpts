@@ -24,7 +24,7 @@ const Navbar = () => {
     console.log(isClicked)
   }
   return (
-    <Grid container spacing={3} justify="center" alignItems="center" className={classes.root}>
+    <Grid container spacing={3} justify="center"  className={classes.root}>
       <Button onClick={onClickHandler}><Link to="/">Home</Link></Button>
       <Divider orientation="vertical" flexItem />
       <Button onClick={onClickHandler}><Link to="residential">Residential</Link></Button>
@@ -35,7 +35,7 @@ const Navbar = () => {
       <Divider orientation="vertical" flexItem />
       <Button onClick={onClickHandler}><Link to="education">Education</Link></Button>
       <Divider orientation="vertical" flexItem />
-      <Button onClick={onClickHandler}><Link to="about">About</Link></Button>
+      <Button onClick={onClickHandler}><Link to="about">Contact Us</Link></Button>
     </Grid>
   )
 }

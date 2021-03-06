@@ -12,20 +12,20 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const Main = () => {
-const classes = useStyles();
+  const classes = useStyles();
 
   return (
-    <Grid container spacing={3} justify="right" alignItems="right" className={classes.root}>
-      
-        <Grid item xs={12}>
-          <Typography>main page content goes here</Typography>
-          <List>
-            <ListItem>a</ListItem>
-            <ListItem>b</ListItem>
-            <ListItem>c</ListItem>
-          </List>
-        </Grid>
-      
+    <Grid container spacing={3} className={classes.root}>
+      <Grid item xs={12}>
+        <Typography>main page content goes here</Typography>
+      </Grid>
+      <Grid item xs={12}>
+        <List>
+          <ListItem>a</ListItem>
+          <ListItem>b</ListItem>
+          <ListItem>c</ListItem>
+        </List>
+      </Grid>
     </Grid>
   )
 }
