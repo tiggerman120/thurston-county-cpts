@@ -4,6 +4,7 @@ import { Grid, Typography } from '@material-ui/core';
 
 
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -24,7 +25,8 @@ const Header = () => {
     <Grid container spacing={3} justify="center"  className={classes.root}>
       <Grid item xs={12}>
         <img src="../../assets/cpts-logo.jpg" alt="" ></img>
-        <Typography variant="h2" color="textPrimary" className={classes.typography}>CPTS Resource Page</Typography>
+        
+        <Typography variant="h2" color="textPrimary" className={classes.typography}>Community Partnership for Transition Services</Typography>
       </Grid>
     </Grid>
   )
