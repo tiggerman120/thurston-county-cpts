@@ -37,8 +37,21 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'lightGrey',
   },
   residential: {
-    border: 'solid 1px',
+    backgroundColor: 'lightGrey',
+  },
+  employment: {
+    backgroundColor: 'lightGrey',
+  },
+  family: {
+    backgroundColor: 'lightgrey',
+  },
+  education: {
+    backgroundColor: 'lightgrey',
+  },
+  about: {
+    backgroundColor: 'lightGrey',
   }
+
 }))
 
 function App() {
@@ -75,7 +88,7 @@ function App() {
           </Route>
           <Route path="/employment">
             
-            <Grid item xs={9} className={classes.residential}>
+            <Grid item xs={9} className={classes.employment}>
               <Employment />
             </Grid>
             <Grid item xs={12}>
@@ -84,7 +97,7 @@ function App() {
           </Route>
           <Route path="/family">
             
-            <Grid item xs={9} className={classes.residential}>
+            <Grid item xs={9} className={classes.family}>
               <Family />
             </Grid>
             <Grid item xs={12}>
@@ -93,7 +106,7 @@ function App() {
           </Route>
           <Route path="/education">
             
-            <Grid item xs={9} className={classes.residential}>
+            <Grid item xs={9} className={classes.education}>
               <Education />
             </Grid>
             <Grid item xs={12}>
@@ -102,7 +115,7 @@ function App() {
           </Route>
           <Route path="/about">
             
-            <Grid item xs={9} className={classes.residential}>
+            <Grid item xs={9} className={classes.about}>
               <About />
             </Grid>
             <Grid item xs={12}>
