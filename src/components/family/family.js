@@ -1,54 +1,55 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, Grid, Typography } from '@material-ui/core';
+import { Card, Grid, Paper, Typography } from '@material-ui/core';
+import residential from '../../assets/residential.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    border: 'solid 1px',
   },
   card: {
     display: 'inline-block',
-    width: 400,
+    width: '20.8vw',
+    height: 400,
+    margin: '10px',
+  },
+  img: {
+    width: '64.6vw',
+    height: '300px',
+  },
+  topCard: {
+    width: '64.6vw',
     height: 400,
     margin: '10px',
   },
   typography: {
     textAlign: 'center',
-  }
+  },
 }))
 
 const Family = () => {
-const classes = useStyles();
+  const classes = useStyles();
 
   return (
     <Grid container spacing={3} className={classes.root}>
       <Grid item xs={12}>
-        
-        <Card className={classes.card}>
-          <img src="https://via.placeholder.com/400x300" alt="" />
+
+        <Paper elevation={3} square className={classes.topCard}>
+          <img src={residential} width="1240" height="300" alt="" />
           <Typography className={classes.typography}>ipsum lorem</Typography>
-          </Card>
-          <Card className={classes.card}>
-          <img src="https://via.placeholder.com/400x300" alt="" />
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-          </Card>
-          <Card className={classes.card}>
-          <img src="https://via.placeholder.com/400x300" alt="" />
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-          </Card>
+        </Paper>
         <br />
-        <Card className={classes.card}>
+        <Card elevation={3} square className={classes.card}>
           <img src="https://via.placeholder.com/400x300" alt="" />
           <Typography className={classes.typography}>ipsum lorem</Typography>
-          </Card>
-          <Card className={classes.card}>
+        </Card>
+        <Card elevation={3} square className={classes.card}>
           <img src="https://via.placeholder.com/400x300" alt="" />
           <Typography className={classes.typography}>ipsum lorem</Typography>
-          </Card>
-          <Card className={classes.card}>
+        </Card>
+        <Card elevation={3} square className={classes.card}>
           <img src="https://via.placeholder.com/400x300" alt="" />
           <Typography className={classes.typography}>ipsum lorem</Typography>
-          </Card>
+        </Card>
       </Grid>
     </Grid>
   )
