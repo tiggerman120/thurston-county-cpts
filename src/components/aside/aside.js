@@ -8,7 +8,6 @@ import WcIcon from '@material-ui/icons/Wc';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    border: 'solid 1px',
   },
   typography: {
     color: 'white',
@@ -27,44 +26,38 @@ const Aside = () => {
       
         <Typography className={classes.typography}>Quick Links</Typography>
         <List>
-          <Typography>Residential Services</Typography>
-          <HouseIcon />
+        <Typography><HouseIcon /> Residential Services</Typography>
+          
           <List>
             <ListItem><a href="https://www.commerce.wa.gov/serving-communities/homelessness/">Emergency Rental Assistance</a></ListItem>
-            <ListItem>b</ListItem>
-            <ListItem>c</ListItem>
           </List>
         </List>
         <Grid item xs={12}>
           <List>
-            <Typography>Employment Services</Typography>
-            <EmojiTransportationIcon />
+            <Typography><EmojiTransportationIcon /> Employment Services</Typography>
+            
             <List>
               <ListItem><a href="https://www.peopleready.com/locations/">Labor Ready Locations</a></ListItem>
-              <ListItem>b</ListItem>
-              <ListItem>c</ListItem>
             </List>
           </List>
         </Grid>
         <Grid item xs={12}>
           <List>
-            <Typography>Family Services</Typography>
-            <WcIcon />
+            <Typography> <WcIcon /> Family Services</Typography>
+            
             <List>
               <ListItem><a href="https://coronavirus.wa.gov/information-for/you-and-your-family/food-assistance">Food Assistance</a></ListItem>
-              <ListItem>b</ListItem>
-              <ListItem>c</ListItem>
+              <ListItem><a href="https://www.northwestharvest.org/our-work/hunger-response-network/?">Food Bank Locations</a></ListItem>
             </List>
           </List>
         </Grid>
         <Grid item xs={12}>
           <List>
-            <Typography>Education Services</Typography>
-            <SchoolIcon />
+            <Typography><SchoolIcon /> Education Services</Typography>
+            
             <List>
               <ListItem><a href="https://spscc.edu/policy/stsv200">SPSCC Enrollment Services</a></ListItem>
               <ListItem><a href="https://www.evergreen.edu/directory/offices/enrollment-services">Evergreen State College Enrollment Services</a></ListItem>
-              <ListItem>c</ListItem>
             </List>
           </List>
         </Grid>

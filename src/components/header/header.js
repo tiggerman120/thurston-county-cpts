@@ -8,11 +8,14 @@ import { Grid, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    border: 'solid 1px',
     alignContent: 'center',
   },
+  img: {
+    position: 'relative',
+    display: 'inline-block',
+  },
   typography: {
-   textAlign: 'center',
+    textAlign: 'center',
   },
 }))
 
@@ -22,10 +25,11 @@ const Header = () => {
 
 
   return (
-    <Grid container spacing={3} justify="center"  className={classes.root}>
-      <Grid item xs={12}>
-        <img src="../../assets/cpts-logo.jpg" alt="" ></img>
-        
+    <Grid container spacing={3} className={classes.root}>
+      <Grid item xs={1}>
+      <a href="#top"><img className={classes.img} src="https://via.placeholder.com/150x150" alt="" ></img></a>
+      </Grid>
+      <Grid item xs={11}>
         <Typography variant="h2" color="textPrimary" className={classes.typography}>Community Partnership for Transition Services</Typography>
       </Grid>
     </Grid>

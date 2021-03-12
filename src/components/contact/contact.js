@@ -4,7 +4,6 @@ import { Button, Grid, List, ListItem, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    border: 'solid 1px',
     backgroundColor: 'lightGrey',
   },
   list: {
