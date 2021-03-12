@@ -10,6 +10,7 @@ import Main from './components/main/main';
 import Navbars from './components/navbar/navbar';
 import Residential from './components/residential/residential';
 import { makeStyles } from '@material-ui/core/styles';
+import Hidden from '@material-ui/core/Hidden';
 
 import {
   BrowserRouter as Router,
@@ -17,7 +18,10 @@ import {
   Route,
 } from "react-router-dom";
 
+
+
 const useStyles = makeStyles((theme) => ({
+
   root: {
     flexGrow: 1,
     background: 'linear-gradient(45deg, #358302 30%, #1D4701 90%)',
@@ -31,10 +35,17 @@ const useStyles = makeStyles((theme) => ({
     background: 'linear-gradient(45deg, #358302 30%, #1D4701 90%)',
   },
   navbar: {
-    
+
     position: 'sticky',
     top: 176,
     zIndex: 2,
+
+    [theme.breakpoints.only('xs')]: {
+      top: 0
+    },
+    [theme.breakpoints.only('sm')]: {
+      top: 0,
+    },
   },
   aside: {
     backgroundColor: 'lightGrey',
@@ -61,86 +72,71 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 function App() {
+
   const classes = useStyles();
   return (
+
     <Grid container spacing={3} className={classes.root}>
       <Router>
-        <Grid item xs={12} className={classes.header}>
-          <Header />
-        </Grid>
+        <Hidden only={['xs', 'sm']}>
+          <Grid item xs={12} className={classes.header}>
+            <Header />
+          </Grid>
+        </Hidden>
+
+
         <Grid item xs={12} className={classes.navbar}>
           <Navbars />
         </Grid>
-        <Grid item xs={2} className={classes.aside}>
+
+
+        <Grid item xs={12} sm={2} className={classes.aside}>
           <Aside />
         </Grid>
+
         <Switch>
           <Route exact path="/">
-            <Grid item xs={10} className={classes.home}>
+            <Grid item xs={12} sm={10} className={classes.home}>
               <Main />
             </Grid>
-            <Grid item xs={12}>
-              <Footer />
-            </Grid>
           </Route>
-          <Route path="/residential">
 
-            <Grid item xs={10} className={classes.residential}>
+          <Route path="/residential">
+            <Grid item xs={12} sm={10} className={classes.residential}>
               <Residential />
             </Grid>
-            <Grid item xs={12}>
-              <Footer />
-            </Grid>
           </Route>
-          <Route path="/employment">
 
-            <Grid item xs={10} className={classes.employment}>
+          <Route path="/employment">
+            <Grid item xs={12} sm={10} className={classes.employment}>
               <Employment />
             </Grid>
-            <Grid item xs={12}>
-              <Footer />
-            </Grid>
           </Route>
-          <Route path="/family">
 
-            <Grid item xs={10} className={classes.family}>
+          <Route path="/family">
+            <Grid item xs={12} sm={10} className={classes.family}>
               <Family />
             </Grid>
-            <Grid item xs={12}>
-              <Footer />
-            </Grid>
           </Route>
-          <Route path="/education">
 
-            <Grid item xs={10} className={classes.education}>
+          <Route path="/education">
+            <Grid item xs={12} sm={10} className={classes.education}>
               <Education />
             </Grid>
-            <Grid item xs={12}>
-              <Footer />
-            </Grid>
           </Route>
+
           <Route path="/about">
-
-            <Grid item xs={10} className={classes.about}>
+            <Grid item xs={12} sm={10} className={classes.about}>
               <About />
-            </Grid>
-            <Grid item xs={12}>
-              <Footer />
-            </Grid>
-          </Route>
-
-          <Route path="/">
-            <Grid item xs={3} justify="left" alignItems="left">
-              <Aside />
-            </Grid>
-            <Grid item xs={9} justify="right" alignItems="right">
-              <Main />
-            </Grid>
-            <Grid item xs={12} justify="right" alignItems="right">
-              <Footer />
             </Grid>
           </Route>
         </Switch>
+        
+        <Hidden only="xs">
+          <Grid item xs={12}>
+            <Footer />
+          </Grid>
+        </Hidden>
       </Router>
     </Grid>
   );

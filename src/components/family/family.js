@@ -5,21 +5,38 @@ import residential from '../../assets/residential.jpg';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    [theme.breakpoints.only('xs')]: {
+      alignContent: 'center',
+    },
   },
   card: {
     display: 'inline-block',
     width: '20.8vw',
     height: 400,
     margin: '10px',
+    [theme.breakpoints.only('xs')]: {
+      display: 'block',
+      width: '480px',
+      margin: 'auto',
+      marginBottom: '10px',
+    },
   },
   img: {
-    width: '64.6vw',
+    width: '65vw',
     height: '300px',
+    [theme.breakpoints.only('xs')]: {
+      width: '480px',
+    },
   },
   topCard: {
-    width: '64.6vw',
-    height: 400,
+    width: '65vw',
+    height: '400px',
     margin: '10px',
+    [theme.breakpoints.only('xs')]: {
+      display: 'block',
+      width: '480px',
+      margin: 'auto',
+    }
   },
   typography: {
     textAlign: 'center',
@@ -34,20 +51,20 @@ const Family = () => {
       <Grid item xs={12}>
 
         <Paper elevation={3} square className={classes.topCard}>
-          <img src={residential} width="1240" height="300" alt="" />
+          <img className={classes.img} src={residential} width="1240" height="300" alt="" />
           <Typography className={classes.typography}>ipsum lorem</Typography>
         </Paper>
         <br />
         <Card elevation={3} square className={classes.card}>
-          <img src="https://via.placeholder.com/400x300" alt="" />
+          <img className={classes.img} src="https://via.placeholder.com/400x300" alt="" />
           <Typography className={classes.typography}>ipsum lorem</Typography>
         </Card>
         <Card elevation={3} square className={classes.card}>
-          <img src="https://via.placeholder.com/400x300" alt="" />
+          <img className={classes.img} src="https://via.placeholder.com/400x300" alt="" />
           <Typography className={classes.typography}>ipsum lorem</Typography>
         </Card>
         <Card elevation={3} square className={classes.card}>
-          <img src="https://via.placeholder.com/400x300" alt="" />
+          <img className={classes.img} src="https://via.placeholder.com/400x300" alt="" />
           <Typography className={classes.typography}>ipsum lorem</Typography>
         </Card>
       </Grid>

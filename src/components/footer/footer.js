@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexgrow: 1,
     background: 'linear-gradient(45deg, #707170 30%, #424242 90%)',
+    [theme.breakpoints.only('xs')]: {
+      float: 'left',
+    },
   },
   button: {
     backgroundColor: 'white',
@@ -40,19 +43,17 @@ const Footer = () => {
 
   return (
     <Grid container spacing={3} className={classes.root}>
-      <Grid item xs={3}>
-
-      </Grid>
-      <Grid item xs={3}>
+      <Grid item xs={4}>
         <Typography>Follow Us</Typography>
         <List>
-          <ListItem><IconButton > <a href="https://instagram.com" className={classes.link}><InstagramIcon /></a></IconButton></ListItem>
-          <ListItem><IconButton > <a href="https://facebook.com" className={classes.link}><FacebookIcon /></a></IconButton></ListItem>
-          <ListItem><IconButton > <a href="https://twitter.com" className={classes.link}><TwitterIcon /></a></IconButton></ListItem>
+          <ListItem><IconButton > <a href="https://instagram.com" className={classes.link}><InstagramIcon /></a></IconButton><Typography>Instagram</Typography></ListItem>
+          
+          <ListItem><IconButton > <a href="https://facebook.com" className={classes.link}><FacebookIcon /></a></IconButton><Typography>Facebook</Typography></ListItem>
+          <ListItem><IconButton > <a href="https://twitter.com" className={classes.link}><TwitterIcon /></a></IconButton><Typography>Twitter</Typography></ListItem>
 
         </List>
       </Grid>
-      <Grid item xs={3}>
+      <Grid item xs={4}>
         <Typography>Get Involved</Typography>
         <List>
           <ListItem><Button className={classes.button} onClick={() => donateHandler()}>Donate Now</Button></ListItem>
@@ -60,7 +61,7 @@ const Footer = () => {
           <ListItem><Button className={classes.button} onClick={() => onClickHandler()}>Become an Advocate</Button></ListItem>
         </List>
       </Grid>
-      <Grid item xs={3}>
+      <Grid item xs={4}>
         <Typography>Get Involved</Typography>
         <Form >
           <Form.Control type="text" placeholder="Enter email address"></Form.Control>
@@ -69,6 +70,7 @@ const Footer = () => {
 
         </Form>
       </Grid>
+
       <Grid item xs={12}>
         <Typography className={classes.typography}>Web Design by Garrett Cintron</Typography>
       </Grid>

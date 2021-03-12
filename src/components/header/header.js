@@ -11,10 +11,17 @@ const useStyles = makeStyles((theme) => ({
     alignContent: 'center',
   },
   img: {
-    position: 'relative',
+    
+    float: 'left',
     display: 'inline-block',
+    [theme.breakpoints.only('xs')]: {
+      display: 'block',
+      width: '95vw',
+      height: '150px',
+    },
   },
   typography: {
+    display: 'block',
     textAlign: 'center',
   },
 }))
@@ -26,10 +33,8 @@ const Header = () => {
 
   return (
     <Grid container spacing={3} className={classes.root}>
-      <Grid item xs={1}>
+      <Grid item xs={12}>
       <a href="#top"><img className={classes.img} src="https://via.placeholder.com/150x150" alt="" ></img></a>
-      </Grid>
-      <Grid item xs={11}>
         <Typography variant="h2" color="textPrimary" className={classes.typography}>Community Partnership for Transition Services</Typography>
       </Grid>
     </Grid>
