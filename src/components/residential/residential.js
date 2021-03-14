@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   img: {
-    width: '65vw',
+    width: '100%',
     height: '300px',
     [theme.breakpoints.only('xs')]: {
       width: '480px',

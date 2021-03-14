@@ -62,7 +62,7 @@ const Footer = () => {
         </List>
       </Grid>
       <Grid item xs={4}>
-        <Typography>Get Involved</Typography>
+        <Typography>Stay Informed</Typography>
         <Form >
           <Form.Control type="text" placeholder="Enter email address"></Form.Control>
           <Button className={classes.button}><ArrowRightIcon /></Button><br />

@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
   typography: {
     display: 'block',
     textAlign: 'center',
+    color: 'white',
   },
 }))
 
