@@ -71,7 +71,7 @@ const Navbars = () => {
         <Button className={classes.button} onClick={onClickHandler}><Link to="about" className={classes.link}>Contact Us</Link></Button>
         <Form inline className={classes.form}>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button className={classes.button} variant="outline-info">Search</Button>
+      <Button className={classes.button} variant="outlined">Search</Button>
     </Form>
       </Grid>
     </Grid>

@@ -13,27 +13,32 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     display: 'inline-block',
-    width: '20.8vw',
+    width: '32%',
     height: 400,
-    margin: '10px',
+    margin: '5px',
     [theme.breakpoints.only('xs')]: {
       display: 'block',
       width: '480px',
       margin: 'auto',
       marginBottom: '10px',
     },
+    [theme.breakpoints.only('sm')]: {
+      margin: '3px',
+    },
   },
   img: {
-    width: '65vw',
+    width: '100%',
     height: '300px',
     [theme.breakpoints.only('xs')]: {
       width: '480px',
+      
     },
   },
   topCard: {
-    width: '65vw',
+    width: '96%',
     height: '400px',
-    margin: '10px',
+    marginLeft: '15px',
+    
     [theme.breakpoints.only('xs')]: {
       display: 'block',
       width: '480px',

@@ -33,8 +33,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   topCard: {
-    width: '100%',
+    width: '96%',
     height: '400px',
+    marginLeft: '15px',
     
     [theme.breakpoints.only('xs')]: {
       display: 'block',

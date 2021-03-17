@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   navbar: {
 
     position: 'sticky',
-    top: 176,
+    top: 174,
     zIndex: 2,
 
     [theme.breakpoints.only('xs')]: {
@@ -48,25 +48,25 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   aside: {
-    backgroundColor: 'lightGrey',
+    backgroundColor: 'beige',
   },
   home: {
-    backgroundColor: 'lightGrey',
+    backgroundColor: 'beige',
   },
   residential: {
-    backgroundColor: 'lightGrey',
+    backgroundColor: 'beige',
   },
   employment: {
-    backgroundColor: 'lightGrey',
+    backgroundColor: 'beige',
   },
   family: {
-    backgroundColor: 'lightgrey',
+    backgroundColor: 'beige',
   },
   education: {
-    backgroundColor: 'lightgrey',
+    backgroundColor: 'beige',
   },
   about: {
-    backgroundColor: 'lightGrey',
+    backgroundColor: 'beige',
   }
 
 }))

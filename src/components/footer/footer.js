@@ -46,10 +46,10 @@ const Footer = () => {
       <Grid item xs={4}>
         <Typography>Follow Us</Typography>
         <List>
-          <ListItem><IconButton > <a href="https://instagram.com" className={classes.link}><InstagramIcon /></a></IconButton><Typography>Instagram</Typography></ListItem>
+          <ListItem><IconButton > <a href="https://instagram.com" className={classes.link}><InstagramIcon /></a><Typography>Instagram</Typography></IconButton></ListItem>
           
-          <ListItem><IconButton > <a href="https://facebook.com" className={classes.link}><FacebookIcon /></a></IconButton><Typography>Facebook</Typography></ListItem>
-          <ListItem><IconButton > <a href="https://twitter.com" className={classes.link}><TwitterIcon /></a></IconButton><Typography>Twitter</Typography></ListItem>
+          <ListItem><IconButton > <a href="https://facebook.com" className={classes.link}><FacebookIcon /></a><Typography>Facebook</Typography></IconButton></ListItem>
+          <ListItem><IconButton > <a href="https://twitter.com" className={classes.link}><TwitterIcon /></a><Typography>Twitter</Typography></IconButton></ListItem>
 
         </List>
       </Grid>
@@ -62,10 +62,11 @@ const Footer = () => {
         </List>
       </Grid>
       <Grid item xs={4}>
-        <Typography>Get Involved</Typography>
+        <Typography>Stay Informed</Typography>
         <Form >
           <Form.Control type="text" placeholder="Enter email address"></Form.Control>
           <Button className={classes.button}><ArrowRightIcon /></Button><br />
+          <Form.Text>Join our mailing list</Form.Text><br />
           <Form.Text>We'll never share your email with anyone else</Form.Text>
 
         </Form>
