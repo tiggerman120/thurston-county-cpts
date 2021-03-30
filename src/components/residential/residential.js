@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, Grid, Paper, Typography } from '@material-ui/core';
-import residential from '../../assets/residential.jpg';
+import { Grid, List, ListItem, Paper, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
   },
   topCard: {
     width: '96%',
-    height: '400px',
+    height: '500px',
     marginLeft: '15px',
     
     [theme.breakpoints.only('xs')]: {
@@ -54,24 +53,18 @@ const Residential = () => {
   return (
     <Grid container spacing={3} className={classes.root}>
       <Grid item xs={12}>
-
-        <Paper elevation={3} square className={classes.topCard}>
-          <img className={classes.img} src={residential} width="1240" height="300" alt="" />
-          <Typography className={classes.typography}>ipsum lorem</Typography>
+        <Paper className={classes.topCard}>
+          <Typography>Ipsum Lorem</Typography>
+          <List>
+            <ListItem>a</ListItem>
+            <ListItem>b</ListItem>
+            <ListItem>c</ListItem>
+            <ListItem>d</ListItem>
+            <ListItem>e</ListItem>
+            <ListItem>f</ListItem>
+            <ListItem>g</ListItem>
+          </List>
         </Paper>
-        <br />
-        <Card elevation={3} square className={classes.card}>
-          <img className={classes.img} src="https://via.placeholder.com/400x300" alt="" />
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-        </Card>
-        <Card elevation={3} square className={classes.card}>
-          <img className={classes.img} src="https://via.placeholder.com/400x300" alt="" />
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-        </Card>
-        <Card elevation={3} square className={classes.card}>
-          <img className={classes.img} src="https://via.placeholder.com/400x300" alt="" />
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-        </Card>
       </Grid>
     </Grid>
   )

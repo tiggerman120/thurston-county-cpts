@@ -1,14 +1,14 @@
 import { Grid } from '@material-ui/core';
-import About from './components/contact/contact';
+//import About from './components/contact/contact';
 import Aside from './components/aside/aside';
-import Education from './components/education/education';
-import Employment from './components/employment/employment';
-import Family from './components/family/family';
+//import Education from './components/education/education';
+//import Employment from './components/employment/employment';
+//import Family from './components/family/family';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import Main from './components/main/main';
-import Navbars from './components/navbar/navbar';
-import Residential from './components/residential/residential';
+//import Navbars from './components/navbar/navbar';
+//import Residential from './components/residential/residential';
 import { makeStyles } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 
@@ -36,9 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
   navbar: {
 
-    position: 'sticky',
-    top: 174,
-    zIndex: 2,
+
 
     [theme.breakpoints.only('xs')]: {
       top: 0
@@ -85,23 +83,27 @@ function App() {
         </Hidden>
 
 
-        <Grid item xs={12} className={classes.navbar}>
+        {/* <Grid item xs={12} className={classes.navbar}>
           <Navbars />
-        </Grid>
+        </Grid> */}
 
 
-        <Grid item xs={12} sm={2} className={classes.aside}>
-          <Aside />
-        </Grid>
+        
 
         <Switch>
           <Route exact path="/">
-            <Grid item xs={12} sm={10} className={classes.home}>
+            <Grid item xs={2}>
+
+            </Grid>
+            <Grid item xs={4} sm={6} className={classes.home}>
               <Main />
             </Grid>
+            <Grid item xs={4} sm={2} className={classes.aside}>
+          <Aside />
+        </Grid>
           </Route>
 
-          <Route path="/residential">
+          {/* <Route path="/residential">
             <Grid item xs={12} sm={10} className={classes.residential}>
               <Residential />
             </Grid>
@@ -129,7 +131,7 @@ function App() {
             <Grid item xs={12} sm={10} className={classes.about}>
               <About />
             </Grid>
-          </Route>
+          </Route> */}
         </Switch>
         
         <Hidden only="xs">
