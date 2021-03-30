@@ -46,10 +46,10 @@ const Footer = () => {
       <Grid item xs={4}>
         <Typography>Follow Us</Typography>
         <List>
-          <ListItem><IconButton > <a href="https://instagram.com" className={classes.link}><InstagramIcon /></a><Typography>Instagram</Typography></IconButton></ListItem>
+          <ListItem><IconButton > <a href="https://instagram.com" className={classes.link} target="_blank" rel="noreferrer"><InstagramIcon /><Typography>Instagram</Typography></a></IconButton></ListItem>
           
-          <ListItem><IconButton > <a href="https://facebook.com" className={classes.link}><FacebookIcon /></a><Typography>Facebook</Typography></IconButton></ListItem>
-          <ListItem><IconButton > <a href="https://twitter.com" className={classes.link}><TwitterIcon /></a><Typography>Twitter</Typography></IconButton></ListItem>
+          <ListItem><IconButton > <a href="https://facebook.com" className={classes.link} target="_blank" rel="noreferrer"><FacebookIcon /><Typography>Facebook</Typography></a></IconButton></ListItem>
+          <ListItem><IconButton > <a href="https://twitter.com" className={classes.link} target="_blank" rel="noreferrer"><TwitterIcon /><Typography>Twitter</Typography></a></IconButton></ListItem>
 
         </List>
       </Grid>
