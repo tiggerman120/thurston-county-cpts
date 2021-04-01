@@ -75,33 +75,13 @@ const Main = () => {
 
   return (
     <Grid container spacing={3} className={classes.root}>
-      {/* <Grid item xs={12}>
-        <Typography variant="h3" className={classes.typography}>Ipsum lorem</Typography>
-        <Typography className={classes.typography}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In accumsan dignissim diam. Vivamus at facilisis turpis, a varius sem. Sed ac pharetra lacus. Cras facilisis eu tellus quis efficitur. Fusce at ligula sed velit luctus consequat vel eu quam. Nullam efficitur eros id lacus vulputate, ut euismod nibh sagittis.</Typography>
-        <Card elevation={3} square className={classes.topCard}>
-          <Typography className={classes.typography}>Ipsum Lorem</Typography>
-        </Card>
-
-        <Card elevation={3} square className={classes.topCardRight}>
-          <Typography className={classes.typography}>Ipsum Lorem</Typography>
-        </Card>
-        <br />
-        <br />
-        <Card elevation={3} square className={classes.topCard}>
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-        </Card>
-
-        <Card elevation={3} square className={classes.bottomCardRight}>
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-        </Card> */}
+      
         <Container>
       
       <br />
       <Container>
         <Typography variant="h2" className={classes.resourcesTypo}>Resources</Typography>
       </Container>
-      {/* <br />
-      <Card elevation={3} square className={classes.topCard}></Card> */}
       <br />
       <Container>
         <Typography className={classes.resourcesTypo}>Frequently Requested Information</Typography>

@@ -54,14 +54,6 @@ const Family = () => {
 
   return (
     <Container>
-      <Container>
-        <a href="#top"><Typography>Top of page</Typography></a>
-      </Container>
-      <br />
-      <Container>
-        <Typography className={classes.resourcesTypo}>Resources</Typography>
-      </Container>
-      <br />
       <Card elevation={3} square className={classes.topCard}></Card>
       <br />
       <Container>
@@ -93,6 +85,9 @@ const Family = () => {
           <ListItem>d</ListItem>
           <ListItem>e</ListItem>
         </List>
+      </Container>
+      <Container>
+        <a href="#top"><Typography>Top of page</Typography></a>
       </Container>
     </Container>
   )

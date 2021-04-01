@@ -1,9 +1,10 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, List, ListItem, Paper, Typography } from '@material-ui/core';
+import { Container, Grid, List, ListItem, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    alignContent: 'space-between',
     [theme.breakpoints.only('xs')]: {
       alignContent: 'center',
     },
@@ -28,22 +29,41 @@ const useStyles = makeStyles((theme) => ({
     height: '300px',
     [theme.breakpoints.only('xs')]: {
       width: '480px',
-      
+
     },
   },
   topCard: {
-    width: '96%',
-    height: '500px',
+    width: '30%',
+    height: '400px',
+    display: 'inline-block',
     marginLeft: '15px',
-    
+
     [theme.breakpoints.only('xs')]: {
       display: 'block',
       width: '480px',
       margin: 'auto',
     }
   },
+  topCardRight: {
+    float: 'right',
+    width: '30%',
+    height: '400px',
+    display: 'inline-block',
+    marginLeft: '15px',
+  },
+  bottomCardRight: {
+    float: 'right',
+    width: '30%',
+    height: '400px',
+    display: 'inline-block',
+    marginLeft: '15px',
+  },
   typography: {
     textAlign: 'center',
+  },
+  resourcesTypo: {
+    color: 'white',
+    backgroundColor: 'black',
   },
 }))
 
@@ -52,20 +72,48 @@ const Residential = () => {
 
   return (
     <Grid container spacing={3} className={classes.root}>
-      <Grid item xs={12}>
-        <Paper className={classes.topCard}>
-          <Typography>Ipsum Lorem</Typography>
-          <List>
-            <ListItem>a</ListItem>
-            <ListItem>b</ListItem>
-            <ListItem>c</ListItem>
-            <ListItem>d</ListItem>
-            <ListItem>e</ListItem>
-            <ListItem>f</ListItem>
-            <ListItem>g</ListItem>
-          </List>
-        </Paper>
-      </Grid>
+        <Container>
+      
+      <br />
+      <Container>
+        <Typography variant="h2" className={classes.resourcesTypo}>Resources</Typography>
+      </Container>
+      
+      <br />
+      <Container>
+        <Typography className={classes.resourcesTypo}>Frequently Requested Information</Typography>
+        <List>
+          <ListItem>a</ListItem>
+          <ListItem>b</ListItem>
+          <ListItem>c</ListItem>
+          <ListItem>d</ListItem>
+        </List>
+      </Container>
+      <Container>
+        <Typography className={classes.resourcesTypo}>Highlighted Resources</Typography>
+        <List>
+          <ListItem>a</ListItem>
+          <ListItem>b</ListItem>
+          <ListItem>c</ListItem>
+          <ListItem>d</ListItem>
+          <ListItem>e</ListItem>
+          <ListItem>f</ListItem>
+        </List>
+      </Container>
+      <Container>
+        <Typography className={classes.resourcesTypo}>Government Resources</Typography>
+        <List>
+          <ListItem>a</ListItem>
+          <ListItem>b</ListItem>
+          <ListItem>c</ListItem>
+          <ListItem>d</ListItem>
+          <ListItem>e</ListItem>
+        </List>
+      </Container>
+      <Container>
+        <a href="#top"><Typography>Top of page</Typography></a>
+      </Container>
+    </Container>    
     </Grid>
   )
 }
