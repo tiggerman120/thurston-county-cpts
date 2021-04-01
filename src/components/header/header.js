@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     alignContent: 'center',
+    background: 'linear-gradient(45deg, #707170 30%, #424242 90%)',
   },
   img: {
     

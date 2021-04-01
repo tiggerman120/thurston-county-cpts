@@ -29,10 +29,6 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     textAlign: 'center',
-    position: 'sticky',
-    top: 0,
-    zIndex: 2,
-    background: 'linear-gradient(45deg, #358302 30%, #1D4701 90%)',
   },
   navbar: {
 
@@ -88,19 +84,19 @@ function App() {
         </Grid> */}
 
 
-        
+
 
         <Switch>
           <Route exact path="/">
             <Grid item xs={2}>
 
             </Grid>
+            <Grid item xs={4} sm={1} className={classes.aside}>
+              <Aside />
+            </Grid>
             <Grid item xs={4} sm={6} className={classes.home}>
               <Main />
             </Grid>
-            <Grid item xs={4} sm={2} className={classes.aside}>
-          <Aside />
-        </Grid>
           </Route>
 
           {/* <Route path="/residential">
@@ -133,7 +129,7 @@ function App() {
             </Grid>
           </Route> */}
         </Switch>
-        
+
         <Hidden only="xs">
           <Grid item xs={12}>
             <Footer />

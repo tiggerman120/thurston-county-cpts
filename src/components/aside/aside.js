@@ -58,7 +58,7 @@ const Aside = () => {
             <Typography><SchoolIcon /> Education Services</Typography>
 
             <List>
-              <ListItem><Button><a href="https://www.sbctc.edu/our-colleges/explore-colleges/default.aspx" className={classes.button} target="_blank" rel="noreferrer" >List of colleges in Washington</a></Button></ListItem>
+              <ListItem><Button><a href="https://www.sbctc.edu/our-colleges/explore-colleges/default.aspx" className={classes.button} target="_blank" rel="noreferrer" >colleges in Washington</a></Button></ListItem>
               
             </List>
           </List>
