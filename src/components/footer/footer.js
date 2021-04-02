@@ -3,7 +3,7 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
-import { Button, Grid, IconButton, List, ListItem, Typography } from '@material-ui/core';
+import { Button, Grid, IconButton, Typography } from '@material-ui/core';
 import Form from 'react-bootstrap/Form';
 
 
@@ -45,21 +45,21 @@ const Footer = () => {
     <Grid container spacing={3} className={classes.root}>
       <Grid item xs={4}>
         <Typography>Follow Us</Typography>
-        <List>
-          <ListItem><IconButton > <a href="https://instagram.com" className={classes.link} target="_blank" rel="noreferrer"><InstagramIcon /><Typography>Instagram</Typography></a></IconButton></ListItem>
+        
+          <IconButton > <a href="https://instagram.com" className={classes.link} target="_blank" rel="noreferrer"><InstagramIcon /><Typography>Instagram</Typography></a></IconButton>
           
-          <ListItem><IconButton > <a href="https://facebook.com" className={classes.link} target="_blank" rel="noreferrer"><FacebookIcon /><Typography>Facebook</Typography></a></IconButton></ListItem>
-          <ListItem><IconButton > <a href="https://twitter.com" className={classes.link} target="_blank" rel="noreferrer"><TwitterIcon /><Typography>Twitter</Typography></a></IconButton></ListItem>
+          <IconButton > <a href="https://facebook.com" className={classes.link} target="_blank" rel="noreferrer"><FacebookIcon /><Typography>Facebook</Typography></a></IconButton>
+          <IconButton > <a href="https://twitter.com" className={classes.link} target="_blank" rel="noreferrer"><TwitterIcon /><Typography>Twitter</Typography></a></IconButton>
 
-        </List>
+        
       </Grid>
       <Grid item xs={4}>
         <Typography>Get Involved</Typography>
-        <List>
-          <ListItem><Button className={classes.button} onClick={() => donateHandler()}>Donate Now</Button></ListItem>
-          <ListItem><Button className={classes.button} onClick={() => volunteerHandler()}>Volunteer</Button></ListItem>
-          <ListItem><Button className={classes.button} onClick={() => onClickHandler()}>Become an Advocate</Button></ListItem>
-        </List>
+        
+          <Button className={classes.button} onClick={() => donateHandler()}>Donate Now</Button>
+          <Button className={classes.button} onClick={() => volunteerHandler()}>Volunteer</Button>
+          <Button className={classes.button} onClick={() => onClickHandler()}>Become an Advocate</Button>
+        
       </Grid>
       <Grid item xs={4}>
         <Typography>Stay Informed</Typography>

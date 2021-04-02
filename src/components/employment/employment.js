@@ -1,7 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, Grid, Paper, Typography } from '@material-ui/core';
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
