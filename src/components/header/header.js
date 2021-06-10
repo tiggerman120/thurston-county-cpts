@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Typography } from '@material-ui/core';
 import Navbar from '../navbar/navbar';
-import Logo from '../../assets/cptsfbjpg.jpg';
+// import Logo from '../../assets/cptsfbjpg.jpg';
 import Banner from '../../assets/spsfbbannerjpg.jpg';
 
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button, Divider, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from "react-router-dom";
@@ -31,27 +31,27 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const Navbars = () => {
-  const [isClicked, setIsClicked] = useState(false);
+  // const [isClicked, setIsClicked] = useState(false);
   const classes = useStyles();
 
-  const onClickHandler = (e) => {
-    let res = e.target.innerText.toLowerCase()
-    setIsClicked(true);
-  }
+  // const onClickHandler = (e) => {
+  //   let res = e.target.innerText.toLowerCase()
+  //   setIsClicked(true);
+  // }
   return (
     <Grid container spacing={3} justify="center" className={classes.root}>
       <Grid item xs={12} >
-        <Button className={classes.button} onClick={onClickHandler}><Link to="/" className={classes.link}>Home</Link></Button>
+        <Button className={classes.button} ><Link to="/" className={classes.link}>Home</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
-        <Button className={classes.button} onClick={onClickHandler}><Link to="residential" className={classes.link}>Residential</Link></Button>
+        <Button className={classes.button} ><Link to="residential" className={classes.link}>Residential</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
-        <Button className={classes.button} onClick={onClickHandler}><Link to="employment" className={classes.link}>Employment</Link></Button>
+        <Button className={classes.button} ><Link to="employment" className={classes.link}>Employment</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
-        <Button className={classes.button} onClick={onClickHandler}><Link to="family" className={classes.link}>Family</Link></Button>
+        <Button className={classes.button} ><Link to="family" className={classes.link}>Family</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
-        <Button className={classes.button} onClick={onClickHandler}><Link to="education" className={classes.link}>Education</Link></Button>
+        <Button className={classes.button} ><Link to="education" className={classes.link}>Education</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
-        <Button className={classes.button} onClick={onClickHandler}><Link to="about" className={classes.link}>Contact Us</Link></Button>
+        <Button className={classes.button} ><Link to="about" className={classes.link}>Contact Us</Link></Button>
         {/* <Form inline className={classes.form}>
       <FormControl type="text" className="mr-sm-2" />
       <Button className={classes.button} variant="outlined">Search</Button>
