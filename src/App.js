@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'beige',
   },
   home: {
-    backgroundColor: 'beige',
+    backgroundColor: 'white',
   },
   residential: {
     backgroundColor: 'beige',
@@ -72,29 +72,24 @@ function App() {
 
     <Grid container spacing={3} className={classes.root}>
       <Router>
-        <Hidden only={['xs', 'sm']}>
+        
           <Grid item xs={12} className={classes.header}>
             <Header />
           </Grid>
-        </Hidden>
+        
 
 
-        <Grid item xs={12} className={classes.navbar}>
+        {/* <Grid item xs={12} className={classes.navbar}>
           <Navbars />
-        </Grid>
+        </Grid> */}
 
 
 
 
         <Switch>
           <Route exact path="/">
-            <Grid item xs={2}>
-
-            </Grid>
-            <Grid item xs={4} sm={1} className={classes.aside}>
-              <Aside />
-            </Grid>
-            <Grid item xs={4} sm={6} className={classes.home}>
+            
+            <Grid item xs={12} sm={12} md={12} className={classes.home}>
               <Main />
             </Grid>
           </Route>
@@ -160,11 +155,11 @@ function App() {
           </Route>
         </Switch>
 
-        <Hidden only="xs">
+        
           <Grid item xs={12}>
             <Footer />
           </Grid>
-        </Hidden>
+        
       </Router>
     </Grid >
   );

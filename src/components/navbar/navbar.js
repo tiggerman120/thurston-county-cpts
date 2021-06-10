@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    background: 'linear-gradient(45deg, #707170 30%, #424242 90%)',
   },
   button: {
     display: 'inline-block',
@@ -37,9 +36,7 @@ const Navbars = () => {
 
   const onClickHandler = (e) => {
     let res = e.target.innerText.toLowerCase()
-    console.log(res)
     setIsClicked(true);
-    console.log(isClicked)
   }
   return (
     <Grid container spacing={3} justify="center" className={classes.root}>
