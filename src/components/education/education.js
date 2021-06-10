@@ -1,5 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, Grid, Paper, Typography } from '@material-ui/core';
+import { Card, Container, Grid, Paper, Typography } from '@material-ui/core';
+import { Block } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,19 +24,18 @@ const useStyles = makeStyles((theme) => ({
       margin: '3px',
     },
   },
-  img: {
-    width: '100%',
-    height: '300px',
-    [theme.breakpoints.only('xs')]: {
-      width: '480px',
-      
-    },
+  resourcesTypo: {
+    color: 'white',
+    backgroundColor: 'black',
+    textAlign: 'center'
   },
   topCard: {
-    width: '96%',
+    display: 'inline-block',
+    width: '47%',
     height: '400px',
     marginLeft: '15px',
-    
+    marginBottom: '15px',
+
     [theme.breakpoints.only('xs')]: {
       display: 'block',
       width: '480px',
@@ -52,22 +52,28 @@ const Education = () => {
 
   return (
     <Grid container spacing={3} className={classes.root}>
+
+      <Container>
+        <Typography variant="h2" className={classes.resourcesTypo}>Resources</Typography>
+      </Container>
+
       <Grid item xs={12}>
 
         <Paper elevation={3} square className={classes.topCard}>
-          
           <Typography className={classes.typography}>ipsum lorem</Typography>
         </Paper>
+
+        <Paper elevation={3} square className={classes.topCard}>
+          <Typography className={classes.typography}>ipsum lorem</Typography>
+        </Paper>
+
         <br />
-        <Card elevation={3} square className={classes.card}>
+
+        <Card elevation={3} square className={classes.topCard}>
           <Typography className={classes.typography}>ipsum lorem</Typography>
         </Card>
 
-        <Card elevation={3} square className={classes.card}>
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-        </Card>
-
-        <Card elevation={3} square className={classes.card}>
+        <Card elevation={3} square className={classes.topCard}>
           <Typography className={classes.typography}>ipsum lorem</Typography>
         </Card>
       </Grid>
