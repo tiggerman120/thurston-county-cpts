@@ -7,10 +7,10 @@ import Family from './components/family/family';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import Main from './components/main/main';
-import Navbars from './components/navbar/navbar';
+// import Navbars from './components/navbar/navbar';
 import Residential from './components/residential/residential';
 import { makeStyles } from '@material-ui/core/styles';
-import Hidden from '@material-ui/core/Hidden';
+// import Hidden from '@material-ui/core/Hidden';
 
 import {
   BrowserRouter as Router,

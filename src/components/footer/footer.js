@@ -1,9 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+// import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 
 import TwitterIcon from '@material-ui/icons/Twitter';
-import { Button, Grid, IconButton, Typography } from '@material-ui/core';
-import Form from 'react-bootstrap/Form';
+import { Grid, IconButton, Typography } from '@material-ui/core';
+// import Form from 'react-bootstrap/Form';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,16 +29,16 @@ const useStyles = makeStyles((theme) => ({
 const Footer = () => {
   const classes = useStyles();
 
-  const onClickHandler = () => {
+  // const onClickHandler = () => {
 
-  }
+  // }
 
-  const donateHandler = () => {
+  // const donateHandler = () => {
 
-  }
-  const volunteerHandler = () => {
+  // }
+  // const volunteerHandler = () => {
 
-  }
+  // }
 
   return (
     <Grid container spacing={3} className={classes.root}>
