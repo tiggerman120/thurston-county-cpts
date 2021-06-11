@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     alignContent: 'space-between',
+    backgroundColor: '#ECEAEA',
     [theme.breakpoints.only('xs')]: {
       alignContent: 'center',
     },
@@ -24,7 +25,15 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('md')]: {
       height: '200px',
       textAlign: 'center',
-    }
+    },
+    [theme.breakpoints.only('lg')]: {
+      height: '300px',
+      textAlign: 'center',
+    },
+    [theme.breakpoints.only('xl')]: {
+      height: '300px',
+      textAlign: 'center',
+    },
   },
   img: {
     width: '100%',
@@ -77,7 +86,7 @@ const Main = () => {
 
       <Container>
         <Container>
-          <Typography variant="h2">Our Mission</Typography>
+          <Typography variant="h2" className={classes.typography}>Our Mission</Typography>
           <Card className={classes.card}>Lorem Ipsum
           <br />
           Insert soft colored background picture
@@ -85,7 +94,7 @@ const Main = () => {
         </Container>
         <br />
         <Container>
-          <Typography variant="h2" className={classes.resourcesTypo}>Resources</Typography>
+          <Typography variant="h3" className={classes.resourcesTypo}>Resources</Typography>
         </Container>
         <br />
         <Container>
