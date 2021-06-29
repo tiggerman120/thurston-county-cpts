@@ -9,6 +9,7 @@ import Header from './components/header/header';
 import Main from './components/main/main';
 // import Navbars from './components/navbar/navbar';
 import Residential from './components/residential/residential';
+import SocialMediaFooter from './components/footer/social-media-footer'
 import { makeStyles } from '@material-ui/core/styles';
 // import Hidden from '@material-ui/core/Hidden';
 
@@ -157,6 +158,7 @@ function App() {
 
         
           <Grid item xs={12}>
+            <SocialMediaFooter />
             <Footer />
           </Grid>
         

@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, Container, Grid, List, ListItem, Typography } from '@material-ui/core';
+import { Container, Grid, List, ListItem, Typography } from '@material-ui/core';
 
 
 
@@ -86,11 +86,19 @@ const Main = () => {
 
       <Container>
         <Container>
-          <Typography variant="h2" className={classes.typography}>Our Mission</Typography>
-          <Card className={classes.card}>Lorem Ipsum
-          <br />
-          Insert soft colored background picture
-          </Card>
+          <Typography variant="h2" className={classes.resourcesTypo}>Our Mission</Typography>
+          <Typography variant="h4" className={classes.typography}>
+            Promote the successful transition of justice involved, system impacted,
+            and marginalized people into our communities.
+          </Typography>
+          <Typography variant="h2" className={classes.resourcesTypo}>
+            Our Vision
+          </Typography>
+          <Typography variant="h4" className={classes.typography}>
+            Seamless re-integration through a committed, engaged and diverse
+            group of partners who advocate for individuals by sharing resources,
+            knowledge, and abilities.
+          </Typography>
         </Container>
         <br />
         <Container>
