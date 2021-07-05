@@ -1,6 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Container, Grid, List, ListItem, Typography } from '@material-ui/core';
-// import { Block } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -77,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Education = () => {
+const DV = () => {
   const classes = useStyles();
 
   return (
@@ -126,4 +125,4 @@ const Education = () => {
   )
 }
 
-export default Education
+export default DV

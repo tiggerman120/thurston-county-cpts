@@ -43,13 +43,15 @@ const Navbars = () => {
       <Grid item xs={12} >
         <Button className={classes.button} ><Link to="/" className={classes.link}>Home</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
-        <Button className={classes.button} ><Link to="residential" className={classes.link}>Residential</Link></Button>
+        <Button className={classes.button} ><Link to="dv" className={classes.link}>Domestic Violence</Link></Button>
+        <Divider className={classes.divider} orientation="vertical" flexItem />
+        <Button className={classes.button} ><Link to="education" className={classes.link}>Education</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
         <Button className={classes.button} ><Link to="employment" className={classes.link}>Employment</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
         <Button className={classes.button} ><Link to="family" className={classes.link}>Family</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
-        <Button className={classes.button} ><Link to="education" className={classes.link}>Education</Link></Button>
+        <Button className={classes.button} ><Link to="residential" className={classes.link}>Residential</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
         <Button className={classes.button} ><Link to="about" className={classes.link}>Contact Us</Link></Button>
         {/* <Form inline className={classes.form}>

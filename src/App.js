@@ -1,6 +1,7 @@
 import { Grid } from '@material-ui/core';
 import About from './components/contact/contact';
 import Aside from './components/aside/aside';
+import DV from './components/dv/dv'
 import Education from './components/education/education';
 import Employment from './components/employment/employment';
 import Family from './components/family/family';
@@ -42,27 +43,7 @@ const useStyles = makeStyles((theme) => ({
       top: 0,
     },
   },
-  aside: {
-    backgroundColor: 'beige',
-  },
-  home: {
-    backgroundColor: 'white',
-  },
-  residential: {
-    backgroundColor: 'beige',
-  },
-  employment: {
-    backgroundColor: 'beige',
-  },
-  family: {
-    backgroundColor: 'beige',
-  },
-  education: {
-    backgroundColor: 'beige',
-  },
-  about: {
-    backgroundColor: 'beige',
-  }
+
 
 }))
 
@@ -95,15 +76,16 @@ function App() {
             </Grid>
           </Route>
 
-          <Route path="/residential">
-            <Grid item xs={2}>
+          <Route path="/dv">
+            
+            <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <DV />
+            </Grid>
+          </Route>
 
-            </Grid>
-            <Grid item xs={4} sm={1} className={classes.aside}>
-              <Aside />
-            </Grid>
-            <Grid item xs={4} sm={6} className={classes.residential}>
-              <Residential />
+          <Route path="/education">
+          <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Education />
             </Grid>
           </Route>
 
@@ -119,6 +101,8 @@ function App() {
             </Grid>
           </Route>
 
+
+
           <Route path="/family">
             <Grid item xs={2}>
 
@@ -131,15 +115,18 @@ function App() {
             </Grid>
           </Route>
 
-          <Route path="/education">
+
+
+
+          <Route path="/residential">
             <Grid item xs={2}>
 
             </Grid>
             <Grid item xs={4} sm={1} className={classes.aside}>
               <Aside />
             </Grid>
-            <Grid item xs={4} sm={6} className={classes.home}>
-              <Education />
+            <Grid item xs={4} sm={6} className={classes.residential}>
+              <Residential />
             </Grid>
           </Route>
 
