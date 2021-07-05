@@ -76,14 +76,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Employment = () => {
+const Veterans = () => {
   const classes = useStyles();
+
   return (
     <Grid container spacing={3} className={classes.root}>
 
       <Container>
         <Container>
-          <Typography variant="h3" className={classes.resourcesTypo}>Resources</Typography>
+          <Typography variant="h3" className={classes.resourcesTypo}>Volunteer and Internship Opportunities</Typography>
         </Container>
         <br />
         <Container>
@@ -96,7 +97,7 @@ const Employment = () => {
           </List>
         </Container>
         <Container>
-          <Typography className={classes.resourcesTypo}>Highlighted Resources</Typography>
+          <Typography className={classes.resourcesTypo}>Volunteer Opportunities</Typography>
           <List>
             <ListItem>a</ListItem>
             <ListItem>b</ListItem>
@@ -107,7 +108,7 @@ const Employment = () => {
           </List>
         </Container>
         <Container>
-          <Typography className={classes.resourcesTypo}>Government Resources</Typography>
+          <Typography className={classes.resourcesTypo}>Internship Opportunities</Typography>
           <List>
             <ListItem>a</ListItem>
             <ListItem>b</ListItem>
@@ -124,4 +125,4 @@ const Employment = () => {
   )
 }
 
-export default Employment
+export default Veterans
