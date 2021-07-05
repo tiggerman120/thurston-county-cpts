@@ -1,15 +1,25 @@
 import { Grid } from '@material-ui/core';
 import About from './components/contact/contact';
-import Aside from './components/aside/aside';
+
+import Cdsud from './components/cdsud/cdsud';
+import Covid from './components/covid19/covid19';
+import DV from './components/dv/dv';
 import Education from './components/education/education';
 import Employment from './components/employment/employment';
 import Family from './components/family/family';
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
+import Homeless from './components/houseless/houseless';
+import Housing from './components/housing/housing';
 import Main from './components/main/main';
+import MentalHealth from './components/mentalhealth/mentalhealth'
 // import Navbars from './components/navbar/navbar';
-import Residential from './components/residential/residential';
-import SocialMediaFooter from './components/footer/social-media-footer'
+
+import RSO from './components/rso/rso';
+import Xpoandfood from './components/transpofood/transpofood';
+import Veterans from './components/veterans/veterans';
+import Volunteer from './components/volunteer/volunteer';
+import SocialMediaFooter from './components/footer/social-media-footer';
 import { makeStyles } from '@material-ui/core/styles';
 // import Hidden from '@material-ui/core/Hidden';
 
@@ -25,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 
   root: {
     flexGrow: 1,
-    background: 'linear-gradient(45deg, #358302 30%, #1D4701 90%)',
+    background: 'lightGrey',
 
   },
   header: {
@@ -42,27 +52,7 @@ const useStyles = makeStyles((theme) => ({
       top: 0,
     },
   },
-  aside: {
-    backgroundColor: 'beige',
-  },
-  home: {
-    backgroundColor: 'white',
-  },
-  residential: {
-    backgroundColor: 'beige',
-  },
-  employment: {
-    backgroundColor: 'beige',
-  },
-  family: {
-    backgroundColor: 'beige',
-  },
-  education: {
-    backgroundColor: 'beige',
-  },
-  about: {
-    backgroundColor: 'beige',
-  }
+
 
 }))
 
@@ -73,11 +63,11 @@ function App() {
 
     <Grid container spacing={3} className={classes.root}>
       <Router>
-        
-          <Grid item xs={12} className={classes.header}>
-            <Header />
-          </Grid>
-        
+
+        <Grid item xs={12} className={classes.header}>
+          <Header />
+        </Grid>
+
 
 
         {/* <Grid item xs={12} className={classes.navbar}>
@@ -89,66 +79,100 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            
+
             <Grid item xs={12} sm={12} md={12} className={classes.home}>
               <Main />
             </Grid>
           </Route>
 
-          <Route path="/residential">
-            <Grid item xs={2}>
-
-            </Grid>
-            <Grid item xs={4} sm={1} className={classes.aside}>
-              <Aside />
-            </Grid>
-            <Grid item xs={4} sm={6} className={classes.residential}>
-              <Residential />
+          <Route path="/cdsud">
+            <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Cdsud />
             </Grid>
           </Route>
 
-          <Route path="/employment">
-            <Grid item xs={2}>
-
-            </Grid>
-            <Grid item xs={4} sm={1} className={classes.aside}>
-              <Aside />
-            </Grid>
-            <Grid item xs={4} sm={6} className={classes.home}>
-              <Employment />
+          <Route path="/covid19">
+            <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Covid />
             </Grid>
           </Route>
 
-          <Route path="/family">
-            <Grid item xs={2}>
-
-            </Grid>
-            <Grid item xs={4} sm={1} className={classes.aside}>
-              <Aside />
-            </Grid>
-            <Grid item xs={4} sm={6} className={classes.home}>
-              <Family />
+          <Route path="/dv">
+            <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <DV />
             </Grid>
           </Route>
 
           <Route path="/education">
-            <Grid item xs={2}>
-
-            </Grid>
-            <Grid item xs={4} sm={1} className={classes.aside}>
-              <Aside />
-            </Grid>
-            <Grid item xs={4} sm={6} className={classes.home}>
+            <Grid item xs={12} sm={12} md={12} className={classes.home}>
               <Education />
             </Grid>
           </Route>
+
+          <Route path="/employment">
+            <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Employment />
+            </Grid>
+          </Route>
+
+
+
+          <Route path="/family">
+            <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Family />
+            </Grid>
+          </Route>
+
+          <Route path="/houseless">
+          <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Homeless />
+            </Grid>
+          </Route>
+
+          <Route path="/housing">
+          <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Housing />
+            </Grid>
+          </Route>
+
+          <Route path="/mentalhealth">
+          <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <MentalHealth />
+            </Grid>
+          </Route>
+
+          <Route path="/rso">
+          <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <RSO />
+            </Grid>
+          </Route>
+
+          <Route path="/transpofood">
+          <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Xpoandfood />
+            </Grid>
+          </Route>
+
+          <Route path="/veterans">
+          <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Veterans />
+            </Grid>
+          </Route>
+
+          <Route path="/volunteer">
+          <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Volunteer />
+            </Grid>
+          </Route>
+
+          
 
           <Route path="/about">
             <Grid item xs={2}>
 
             </Grid>
-            <Grid item xs={4} sm={1} className={classes.aside}>
-              <Aside />
+            <Grid item xs={4} sm={1} className={classes.home}>
+              
             </Grid>
             <Grid item xs={4} sm={6} className={classes.home}>
               <About />
@@ -156,12 +180,12 @@ function App() {
           </Route>
         </Switch>
 
-        
-          <Grid item xs={12}>
-            <SocialMediaFooter />
-            <Footer />
-          </Grid>
-        
+
+        <Grid item xs={12}>
+          <SocialMediaFooter />
+          <Footer />
+        </Grid>
+
       </Router>
     </Grid >
   );

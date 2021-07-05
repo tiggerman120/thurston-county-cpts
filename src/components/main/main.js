@@ -75,6 +75,7 @@ const useStyles = makeStyles((theme) => ({
   resourcesTypo: {
     color: 'white',
     backgroundColor: 'black',
+    textAlign: 'center',
   },
 }))
 

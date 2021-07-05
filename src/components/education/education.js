@@ -1,40 +1,51 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Card, Container, Grid, Paper, Typography } from '@material-ui/core';
+import { Container, Grid, List, ListItem, Typography } from '@material-ui/core';
 // import { Block } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    alignContent: 'space-between',
+    backgroundColor: '#ECEAEA',
     [theme.breakpoints.only('xs')]: {
       alignContent: 'center',
     },
   },
   card: {
-    display: 'inline-block',
-    width: '32%',
-    height: 400,
-    margin: '5px',
     [theme.breakpoints.only('xs')]: {
-      display: 'block',
-      width: '480px',
-      margin: 'auto',
-      marginBottom: '10px',
+      height: '200px',
+      textAlign: 'center',
     },
     [theme.breakpoints.only('sm')]: {
-      margin: '3px',
+      height: '200px',
+      textAlign: 'center',
+    },
+    [theme.breakpoints.only('md')]: {
+      height: '200px',
+      textAlign: 'center',
+    },
+    [theme.breakpoints.only('lg')]: {
+      height: '300px',
+      textAlign: 'center',
+    },
+    [theme.breakpoints.only('xl')]: {
+      height: '300px',
+      textAlign: 'center',
     },
   },
-  resourcesTypo: {
-    color: 'white',
-    backgroundColor: 'black',
-    textAlign: 'center'
+  img: {
+    width: '100%',
+    height: '300px',
+    [theme.breakpoints.only('xs')]: {
+      width: '480px',
+
+    },
   },
   topCard: {
-    display: 'inline-block',
-    width: '47%',
+    width: '30%',
     height: '400px',
+    display: 'inline-block',
     marginLeft: '15px',
-    marginBottom: '15px',
 
     [theme.breakpoints.only('xs')]: {
       display: 'block',
@@ -42,7 +53,26 @@ const useStyles = makeStyles((theme) => ({
       margin: 'auto',
     }
   },
+  topCardRight: {
+    float: 'right',
+    width: '30%',
+    height: '400px',
+    display: 'inline-block',
+    marginLeft: '15px',
+  },
+  bottomCardRight: {
+    float: 'right',
+    width: '30%',
+    height: '400px',
+    display: 'inline-block',
+    marginLeft: '15px',
+  },
   typography: {
+    textAlign: 'center',
+  },
+  resourcesTypo: {
+    color: 'white',
+    backgroundColor: 'black',
     textAlign: 'center',
   },
 }))
@@ -54,29 +84,44 @@ const Education = () => {
     <Grid container spacing={3} className={classes.root}>
 
       <Container>
-        <Typography variant="h2" className={classes.resourcesTypo}>Resources</Typography>
-      </Container>
-
-      <Grid item xs={12}>
-
-        <Paper elevation={3} square className={classes.topCard}>
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-        </Paper>
-
-        <Paper elevation={3} square className={classes.topCard}>
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-        </Paper>
-
+        <Container>
+          <Typography variant="h3" className={classes.resourcesTypo}>Resources</Typography>
+        </Container>
         <br />
-
-        <Card elevation={3} square className={classes.topCard}>
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-        </Card>
-
-        <Card elevation={3} square className={classes.topCard}>
-          <Typography className={classes.typography}>ipsum lorem</Typography>
-        </Card>
-      </Grid>
+        <Container>
+          <Typography className={classes.resourcesTypo}>Frequently Requested Information</Typography>
+          <List>
+            <ListItem>a</ListItem>
+            <ListItem>b</ListItem>
+            <ListItem>c</ListItem>
+            <ListItem>d</ListItem>
+          </List>
+        </Container>
+        <Container>
+          <Typography className={classes.resourcesTypo}>Highlighted Resources</Typography>
+          <List>
+            <ListItem>a</ListItem>
+            <ListItem>b</ListItem>
+            <ListItem>c</ListItem>
+            <ListItem>d</ListItem>
+            <ListItem>e</ListItem>
+            <ListItem>f</ListItem>
+          </List>
+        </Container>
+        <Container>
+          <Typography className={classes.resourcesTypo}>Government Resources</Typography>
+          <List>
+            <ListItem>a</ListItem>
+            <ListItem>b</ListItem>
+            <ListItem>c</ListItem>
+            <ListItem>d</ListItem>
+            <ListItem>e</ListItem>
+          </List>
+        </Container>
+        <Container>
+          <a href="#top"><Typography>Top of page</Typography></a>
+        </Container>
+      </Container>
     </Grid>
   )
 }

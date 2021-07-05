@@ -76,8 +76,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Employment = () => {
+const MentalHealth = () => {
   const classes = useStyles();
+
   return (
     <Grid container spacing={3} className={classes.root}>
 
@@ -124,4 +125,4 @@ const Employment = () => {
   )
 }
 
-export default Employment
+export default MentalHealth
