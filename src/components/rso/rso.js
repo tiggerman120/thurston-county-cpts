@@ -84,7 +84,7 @@ const RSO = () => {
 
       <Container>
         <Container>
-          <Typography variant="h3" className={classes.resourcesTypo}>Resources</Typography>
+          <Typography variant="h2" className={classes.resourcesTypo}>Resources</Typography>
         </Container>
         <br />
         <Container>

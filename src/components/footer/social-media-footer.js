@@ -26,19 +26,19 @@ const SocialMediaFooter = () => {
 
   return (
     <Grid container spacing={3} className={classes.root}>
-      <Grid item xs={4}>
+      {/* <Grid item xs={4}>
 
-      </Grid>
-      <Grid item xs={4}>
+      </Grid> */}
+      <Grid item xs={12}>
         <Typography className={classes.typography}>Follow Us</Typography>
         <Container>
           <IconButton className={classes.icon}> <a href="https://twitter.com/spscpts?lang=en" className={classes.link} target="_blank" rel="noreferrer"><TwitterIcon /><Typography>Twitter</Typography></a></IconButton>
           <IconButton > <a href="https://www.facebook.com/spscpts/" className={classes.link} target="_blank" rel="noreferrer"><FacebookIcon /><Typography>Facebook</Typography></a></IconButton>
         </Container>
       </Grid>
-      <Grid item xs={4}>
+      {/* <Grid item xs={4}>
 
-      </Grid>
+      </Grid> */}
     </Grid>
   )
 }
