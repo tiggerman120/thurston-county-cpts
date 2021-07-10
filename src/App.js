@@ -168,13 +168,7 @@ function App() {
           
 
           <Route path="/about">
-            <Grid item xs={2}>
-
-            </Grid>
-            <Grid item xs={4} sm={1} className={classes.home}>
-              
-            </Grid>
-            <Grid item xs={4} sm={6} className={classes.home}>
+          <Grid item xs={12} sm={12} md={12} className={classes.home}>
               <About />
             </Grid>
           </Route>

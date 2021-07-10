@@ -84,7 +84,7 @@ const Veterans = () => {
 
       <Container>
         <Container>
-          <Typography variant="h3" className={classes.resourcesTypo}>Volunteer and Internship Opportunities</Typography>
+          <Typography variant="h2" className={classes.resourcesTypo}>Volunteer and Internship Opportunities</Typography>
         </Container>
         <br />
         <Container>
