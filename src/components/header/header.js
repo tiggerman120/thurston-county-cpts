@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     alignContent: 'center',
-    background: 'linear-gradient(45deg, #483eeb 30%, #030342 90%)',
+    background: '#24562B',
   },
   img: {
 

@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Container, Grid, List, ListItem, Typography } from '@material-ui/core';
+import { Button, Container, Grid, List, ListItem, Typography } from '@material-ui/core';
 
 
 
@@ -12,6 +12,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('xs')]: {
       alignContent: 'center',
     },
+  },
+  button: {
+    width: '100%',
+    height: '20%',
   },
   card: {
     [theme.breakpoints.only('xs')]: {
@@ -34,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
       height: '300px',
       textAlign: 'center',
     },
+  },
+  container: {
+    border: '1px solid black',
   },
   img: {
     width: '100%',
@@ -77,6 +84,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: 'black',
     textAlign: 'center',
   },
+  spacer: {
+    height: '10%',
+  }
 }))
 
 const Main = () => {
@@ -84,61 +94,73 @@ const Main = () => {
 
   return (
     <Grid container spacing={3} className={classes.root}>
+      <Grid item xs={4}>
+      <Button className={classes.button}><Container className={classes.container}>
+          Thurston County Resources
+        </Container></Button>
+        <Container className={classes.spacer}>
+
+        </Container>
+        <Button className={classes.button}><Container className={classes.container}>
+          Mason County Resources(Coming soon)
+        </Container></Button>
+
+        <Container className={classes.spacer}>
+
+        </Container>
+
+        <Button className={classes.button}><Container className={classes.container}>
+          Lewis County Resources(Coming soon)
+        </Container></Button>
+      </Grid>
+
+      <Grid item xs={8}>
+
+
+        <Typography variant="h5">Helping rebuild your life after incarceration</Typography>
+
+        <Typography>After being in prison or jail, rebuilding your life can be hard. Everyone has different
+          needs and it’s not easy finding the help you need. We’re here to help.
+        </Typography>
+
+        <br />
+
+        <Typography>This website is to help connect you to resources and services that help make your
+          journey easier and more successful. In the county tabs to the left, you’ll find many
+          resources and services that help you with:
+        </Typography>
+
+      </Grid>
+
+      <Grid item xs={4}>
+
+      </Grid>
+
+      <Grid item xs={4}>
+        <List>
+          <ListItem>Housing Options</ListItem>
+          <ListItem>Food Assistance</ListItem>
+          <ListItem>Family Support</ListItem>
+          <ListItem>Transportation</ListItem>
+          <ListItem>Veteran Services</ListItem>
+        </List>
+      </Grid>
+
+      <Grid item xs={4}>
+        <List>
+          <ListItem>Housing Options</ListItem>
+          <ListItem>Food Assistance</ListItem>
+          <ListItem>Family Support</ListItem>
+          <ListItem>Transportation</ListItem>
+          <ListItem>Veteran Services</ListItem>
+        </List>
+      </Grid>
+
+
 
       <Container>
-        <Container>
-          <Typography variant="h2" className={classes.resourcesTypo}>Our Mission</Typography>
-          <Typography variant="h4" className={classes.typography}>
-            Promote the successful transition of justice involved, system impacted,
-            and marginalized people into our communities.
-          </Typography>
-          <Typography variant="h2" className={classes.resourcesTypo}>
-            Our Vision
-          </Typography>
-          <Typography variant="h4" className={classes.typography}>
-            Seamless re-integration through a committed, engaged and diverse
-            group of partners who advocate for individuals by sharing resources,
-            knowledge, and abilities.
-          </Typography>
-        </Container>
-        <br />
-        <Container>
-          <Typography variant="h2" className={classes.resourcesTypo}>Resources</Typography>
-        </Container>
-        <br />
-        <Container>
-          <Typography className={classes.resourcesTypo}>Frequently Requested Information</Typography>
-          <List>
-            <ListItem>a</ListItem>
-            <ListItem>b</ListItem>
-            <ListItem>c</ListItem>
-            <ListItem>d</ListItem>
-          </List>
-        </Container>
-        <Container>
-          <Typography className={classes.resourcesTypo}>Highlighted Resources</Typography>
-          <List>
-            <ListItem>a</ListItem>
-            <ListItem>b</ListItem>
-            <ListItem>c</ListItem>
-            <ListItem>d</ListItem>
-            <ListItem>e</ListItem>
-            <ListItem>f</ListItem>
-          </List>
-        </Container>
-        <Container>
-          <Typography className={classes.resourcesTypo}>Government Resources</Typography>
-          <List>
-            <ListItem>a</ListItem>
-            <ListItem>b</ListItem>
-            <ListItem>c</ListItem>
-            <ListItem>d</ListItem>
-            <ListItem>e</ListItem>
-          </List>
-        </Container>
-        <Container>
-          <a href="#top"><Typography>Top of page</Typography></a>
-        </Container>
+        <a href="#top"><Typography className={classes.typography}>Top of page</Typography></a>
+
       </Container>
 
       {/* </Grid> */}

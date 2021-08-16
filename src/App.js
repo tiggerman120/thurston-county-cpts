@@ -8,6 +8,7 @@ import Education from './components/education/education';
 import Employment from './components/employment/employment';
 import Family from './components/family/family';
 import Footer from './components/footer/footer';
+import GoogleMap from './components/googlemap/googlemap';
 import Header from './components/header/header';
 import Homeless from './components/houseless/houseless';
 import Housing from './components/housing/housing';
@@ -81,6 +82,8 @@ function App() {
           <Route exact path="/">
 
             <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <GoogleMap />
+              <br />
               <Main />
             </Grid>
           </Route>
