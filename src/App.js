@@ -10,7 +10,7 @@ import Family from './components/family';
 import Food from './components/food';
 import Footer from './components/footer/footer';
 import GoogleMap from './components/googlemap/googlemap';
-import Header from './components/header/header';
+import Header from './components/header';
 import Healthcare from './components/healthcare';
 import Homeless from './components/houseless';
 import Housing from './components/housing';
@@ -142,6 +142,7 @@ function App() {
 
           <Route path="/houseless">
           <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <GoogleMap />
               <Homeless />
             </Grid>
           </Route>

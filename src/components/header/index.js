@@ -4,9 +4,9 @@ import Hidden from '@material-ui/core/Hidden';
 import Navbar from '../navbar';
 import xsBanner from '../../assets/CPTS300.jpg';
 import smBanner from '../../assets/CPTS600.jpg';
-import mdBanner from '../../assets/CPTS960.jpg';
-import lgBanner from '../../assets/CPTS1280.jpg';
-//import xlBanner from '../../assets/CPTS1960.jpg';
+// import mdBanner from '../../assets/CPTS960.jpg';
+// import lgBanner from '../../assets/CPTS1280.jpg';
+// import xlBanner from '../../assets/CPTS1960.jpg';
 
 const useStyles = makeStyles((theme) => ({
   root: {

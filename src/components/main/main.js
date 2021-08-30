@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, Container, Grid, List, ListItem, Typography } from '@material-ui/core';
+import { Button, Container, Grid, Typography } from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
 
 import HomeIcon from '@material-ui/icons/Home';
