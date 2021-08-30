@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Cdsud = () => {
+const Family = () => {
   const classes = useStyles();
 
   return (
@@ -125,4 +125,4 @@ const Cdsud = () => {
   )
 }
 
-export default Cdsud
+export default Family

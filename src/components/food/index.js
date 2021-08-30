@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Xpoandfood = () => {
+const Food = () => {
   const classes = useStyles();
 
   return (
@@ -125,4 +125,4 @@ const Xpoandfood = () => {
   )
 }
 
-export default Xpoandfood
+export default Food

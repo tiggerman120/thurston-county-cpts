@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Button, Grid, List, ListItem, Typography } from '@material-ui/core';
+import { Button,  Grid, List, ListItem, Typography } from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
 
 const useStyles = makeStyles((theme) => ({
@@ -15,15 +15,22 @@ const useStyles = makeStyles((theme) => ({
   },
   typography: {
 
-    textAlign: 'right',
+    textAlign: 'left',
     alignContent: 'right',
   },
+  img: {
+    width: '100%',
+    height: '100%',
+  },
+  container: {
+    height: '50%',
+  }
 }))
 
-//delete meeting times. expand spacing for facilitators and shrink for button
 
 
-const About = () => {
+
+const Contact = () => {
   const classes = useStyles();
   return (
     <Grid container spacing={3} className={classes.root}>
@@ -356,4 +363,4 @@ const About = () => {
   )
 }
 
-export default About;
+export default Contact;

@@ -1,24 +1,26 @@
 import { Grid } from '@material-ui/core';
-import About from './components/contact/contact';
-
+import About from './components/about';
 import Cdsud from './components/cdsud/cdsud';
+import Contact from './components/contact/contact';
 import Covid from './components/covid19/covid19';
 import DV from './components/dv/dv';
-import Education from './components/education/education';
-import Employment from './components/employment/employment';
-import Family from './components/family/family';
+import Education from './components/education';
+import Employment from './components/employment';
+import Family from './components/family';
+import Food from './components/food';
 import Footer from './components/footer/footer';
-import Header from './components/header/header';
-import Homeless from './components/houseless/houseless';
-import Housing from './components/housing/housing';
+import GoogleMap from './components/googlemap/googlemap';
+import Header from './components/header';
+import Healthcare from './components/healthcare';
+import Homeless from './components/houseless';
+import Housing from './components/housing';
 import Main from './components/main/main';
-import MentalHealth from './components/mentalhealth/mentalhealth'
-// import Navbars from './components/navbar/navbar';
-
-import RSO from './components/rso/rso';
-import Xpoandfood from './components/transpofood/transpofood';
-import Veterans from './components/veterans/veterans';
-import Volunteer from './components/volunteer/volunteer';
+import MentalHealth from './components/mentalhealth'
+import Resources from './components/resources';
+import RSO from './components/rso';
+import Xpo from './components/transpo';
+import Veterans from './components/veterans';
+import Volunteer from './components/volunteer';
 import SocialMediaFooter from './components/footer/social-media-footer';
 import { makeStyles } from '@material-ui/core/styles';
 // import Hidden from '@material-ui/core/Hidden';
@@ -81,6 +83,8 @@ function App() {
           <Route exact path="/">
 
             <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              
+              
               <Main />
             </Grid>
           </Route>
@@ -88,6 +92,12 @@ function App() {
           <Route path="/cdsud">
             <Grid item xs={12} sm={12} md={12} className={classes.home}>
               <Cdsud />
+            </Grid>
+          </Route>
+
+          <Route path="/contact">
+            <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Contact />
             </Grid>
           </Route>
 
@@ -123,11 +133,26 @@ function App() {
             </Grid>
           </Route>
 
+          <Route path="/food">
+            <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Food />
+            </Grid>
+          </Route>
+
+
           <Route path="/houseless">
           <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <GoogleMap />
               <Homeless />
             </Grid>
           </Route>
+
+          <Route path="/healthcare">
+          <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Healthcare />
+            </Grid>
+          </Route>
+
 
           <Route path="/housing">
           <Grid item xs={12} sm={12} md={12} className={classes.home}>
@@ -141,15 +166,21 @@ function App() {
             </Grid>
           </Route>
 
+          <Route path="/resources">
+          <Grid item xs={12} sm={12} md={12} className={classes.home}>
+              <Resources />
+            </Grid>
+          </Route>
+
           <Route path="/rso">
           <Grid item xs={12} sm={12} md={12} className={classes.home}>
               <RSO />
             </Grid>
           </Route>
 
-          <Route path="/transpofood">
+          <Route path="/transpo">
           <Grid item xs={12} sm={12} md={12} className={classes.home}>
-              <Xpoandfood />
+              <Xpo />
             </Grid>
           </Route>
 
