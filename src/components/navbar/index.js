@@ -1,5 +1,6 @@
-import React from 'react';
-import { Button, Divider, Grid } from '@material-ui/core';
+import React, { useCallback, useEffect, useState, useRef } from 'react';
+
+import { Button, Container, Divider, Grid, List, ListItem } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from "react-router-dom";
 
@@ -12,7 +13,17 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-block',
     textAlign: 'center',
     color: 'white',
-    
+
+  },
+  ddm: {
+    position: 'absolute',
+    top: '100%',
+    backgroundColor: '#fff',
+    zIndex: '2',
+  },
+  ddmcont: {
+    display: 'inline-block',
+    position: 'relative',
   },
   divider: {
     display: 'inline-block',
@@ -25,26 +36,26 @@ const useStyles = makeStyles((theme) => ({
   link: {
     color: 'white',
   },
+  listButton: {
+    color: 'black',
+  },
   typography: {
-    
+
   },
 }))
 
 const Navbars = () => {
-  // const [isClicked, setIsClicked] = useState(false);
   const classes = useStyles();
+  
 
-  // const onClickHandler = (e) => {
-  //   let res = e.target.innerText.toLowerCase()
-  //   setIsClicked(true);
-  // }
   return (
     <Grid container spacing={3} justify="center" className={classes.root}>
       <Grid item xs={12} >
         <Button className={classes.button} ><Link to="/" className={classes.link}>Home</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
-        
-        <Button className={classes.button} ><Link to="cdsud" className={classes.link}>CD/SUD</Link></Button>
+
+
+        {/* <Button className={classes.button} ><Link to="cdsud" className={classes.link}>CD/SUD</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
 
         <Button className={classes.button} ><Link to="covid19" className={classes.link}>Covid 19</Link></Button>
@@ -65,7 +76,7 @@ const Navbars = () => {
         <Button className={classes.button} ><Link to="houseless" className={classes.link}>Houseless</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
 
-        <Button className={classes.button} ><Link to="housing" className={classes.link}>Housing</Link></Button>
+        
         <Divider className={classes.divider} orientation="vertical" flexItem />
 
         <Button className={classes.button} ><Link to="mentalhealth" className={classes.link}>Mental health</Link></Button>
@@ -80,14 +91,14 @@ const Navbars = () => {
         <Button className={classes.button} ><Link to="veterans" className={classes.link}>Veterans</Link></Button>
         <Divider className={classes.divider} orientation="vertical" flexItem />
 
-        <Button className={classes.button} ><Link to="volunteer" className={classes.link}>Volunteer & Internship Opportunities</Link></Button>
+        <Button className={classes.button} ><Link to="volunteer" className={classes.link}>Volunteer & Internship Opportunities</Link></Button> */}
         <Divider className={classes.divider} orientation="vertical" flexItem />
 
-        <Button className={classes.button} ><Link to="about" className={classes.link}>Contact Us</Link></Button>
-        {/* <Form inline className={classes.form}>
-      <FormControl type="text" className="mr-sm-2" />
-      <Button className={classes.button} variant="outlined">Search</Button>
-    </Form> */}
+        <Button className={classes.button} ><Link to="about" className={classes.link}>About Us</Link></Button>
+
+        <Button className={classes.button} ><Link to="contact" className={classes.link}>Contact Us</Link></Button>
+
+        
       </Grid>
     </Grid>
   )

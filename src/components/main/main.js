@@ -1,7 +1,15 @@
 import { makeStyles } from '@material-ui/core/styles';
 import { Button, Container, Grid, List, ListItem, Typography } from '@material-ui/core';
+import Hidden from '@material-ui/core/Hidden';
 
-
+import HomeIcon from '@material-ui/icons/Home';
+import AppleIcon from '@material-ui/icons/Apple';
+import PeopleIcon from '@material-ui/icons/People';
+import TimeToLeaveIcon from '@material-ui/icons/TimeToLeave';
+import SchoolIcon from '@material-ui/icons/School';
+import BusinessCenterIcon from '@material-ui/icons/BusinessCenter';
+import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAlt';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -41,6 +49,11 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     border: '1px solid black',
+    height: '20%',
+  },
+  smIcon: {
+    alignContent: 'center',
+
   },
   img: {
     width: '100%',
@@ -49,6 +62,17 @@ const useStyles = makeStyles((theme) => ({
       width: '480px',
 
     },
+  },
+  linkContainer: {
+    border: '1px solid black',
+    width: '50%',
+    height: '50%',
+    display: 'inline-block',
+    textAlign: 'center',
+  },
+  list: {
+    textAlign: 'left',
+
   },
   topCard: {
     width: '30%',
@@ -94,25 +118,35 @@ const Main = () => {
 
   return (
     <Grid container spacing={3} className={classes.root}>
-      <Grid item xs={4}>
-      <Button className={classes.button}><Container className={classes.container}>
-          Thurston County Resources
-        </Container></Button>
-        <Container className={classes.spacer}>
+      <Hidden smDown>
+        <Grid item xs={4}>
+          <Container>
+            <Button className={classes.button}><Container className={classes.container}>
+              Thurston County Resources
+            </Container></Button>
+            <Container className={classes.spacer}>
 
-        </Container>
-        <Button className={classes.button}><Container className={classes.container}>
-          Mason County Resources(Coming soon)
-        </Container></Button>
+            </Container>
+            <Button className={classes.button}><Container className={classes.container}>
+              Mason County Resources(Coming soon)
+            </Container></Button>
 
-        <Container className={classes.spacer}>
+            <Container className={classes.spacer}>
 
-        </Container>
+            </Container>
 
-        <Button className={classes.button}><Container className={classes.container}>
-          Lewis County Resources(Coming soon)
-        </Container></Button>
-      </Grid>
+            <Button className={classes.button}><Container className={classes.container}>
+              Lewis County Resources(Coming soon)
+            </Container></Button>
+          </Container>
+        </Grid>
+      </Hidden>
+
+      <Hidden smUp>
+        <Grid item xs={2}>
+
+        </Grid>
+      </Hidden>
 
       <Grid item xs={8}>
 
@@ -132,28 +166,146 @@ const Main = () => {
 
       </Grid>
 
-      <Grid item xs={4}>
+      <Grid item xs={2}>
+
+      </Grid>
+
+      <Grid item xs={2}>
 
       </Grid>
 
       <Grid item xs={4}>
-        <List>
-          <ListItem>Housing Options</ListItem>
-          <ListItem>Food Assistance</ListItem>
-          <ListItem>Family Support</ListItem>
-          <ListItem>Transportation</ListItem>
-          <ListItem>Veteran Services</ListItem>
-        </List>
+        <Hidden mdUp>
+          <a href="/houseless" >
+            <Container>
+              <HomeIcon style={{ fontSize: '50px' }} />
+              <Typography >Housing</Typography>
+            </Container>
+          </a>
+
+          <a href="/food">
+            <Container>
+              <AppleIcon style={{ fontSize: '50px' }} />
+              <Typography >Food</Typography>
+            </Container>
+          </a>
+          <a href="/family">
+            <Container>
+              <PeopleIcon style={{ fontSize: '50px' }} />
+              <Typography >Family Support</Typography>
+            </Container>
+          </a>
+
+          <a href="/transpo">
+            <Container>
+              <TimeToLeaveIcon style={{ fontSize: '50px' }} />
+              <Typography >Transportation</Typography>
+            </Container>
+          </a>
+        </Hidden>
+
+        <Hidden smDown>
+          
+            <a href="/houseless">
+              <Container className={classes.linkContainer}>
+                <HomeIcon style={{ fontSize: '80px' }} />
+                <Typography >Housing</Typography>
+              </Container>
+            </a>
+
+            <a href="/food">
+              <Container className={classes.linkContainer}>
+                <AppleIcon style={{ fontSize: '80px' }} />
+                <Typography >Food</Typography>
+              </Container>
+            </a>
+            <a href="/family">
+              <Container className={classes.linkContainer}>
+                <PeopleIcon style={{ fontSize: '80px' }} />
+                <Typography >Family</Typography>
+              </Container>
+            </a>
+
+            <a href="/transpo">
+              <Container className={classes.linkContainer}>
+                <TimeToLeaveIcon style={{ fontSize: '80px' }} />
+                <Typography >Transportation</Typography>
+              </Container>
+            </a>
+          
+        </Hidden>
+
       </Grid>
 
       <Grid item xs={4}>
-        <List>
-          <ListItem>Housing Options</ListItem>
-          <ListItem>Food Assistance</ListItem>
-          <ListItem>Family Support</ListItem>
-          <ListItem>Transportation</ListItem>
-          <ListItem>Veteran Services</ListItem>
-        </List>
+        <Hidden mdUp>
+
+          <a href="/education">
+            <Container>
+              <SchoolIcon style={{ fontSize: '50px' }} />
+              <Typography>Education</Typography>
+            </Container>
+          </a>
+
+          <a href="/employment">
+            <Container>
+              <BusinessCenterIcon style={{ fontSize: '50px' }} />
+              <Typography >Employment</Typography>
+            </Container>
+          </a>
+
+          <a href="/mentalhealth">
+            <Container>
+              <SentimentSatisfiedAltIcon style={{ fontSize: '50px' }} />
+              <Typography>Mental Health</Typography>
+            </Container>
+          </a>
+
+          <a href="/healthcare">
+            <Container>
+              <LocalHospitalIcon style={{ fontSize: '50px' }} />
+              <Typography>Healthcare</Typography>
+            </Container>
+          </a>
+
+        </Hidden>
+
+        <Hidden smDown>
+          
+            <a href="/education">
+              <Container className={classes.linkContainer}>
+                <SchoolIcon style={{ fontSize: '80px' }} />
+                <Typography>Education</Typography>
+              </Container>
+            </a>
+
+            <a href="/employment">
+              <Container className={classes.linkContainer}>
+                <BusinessCenterIcon style={{ fontSize: '80px' }} />
+                <Typography >Employment</Typography>
+              </Container>
+            </a>
+
+            <a href="/mentalhealth">
+              <Container className={classes.linkContainer}>
+                <SentimentSatisfiedAltIcon style={{ fontSize: '80px' }} />
+                <Typography>Psychiatric </Typography>
+              </Container>
+            </a>
+
+              <a href="/healthcare">
+            <Container className={classes.linkContainer}>
+                <LocalHospitalIcon style={{ fontSize: '80px' }} />
+                <Typography>Healthcare</Typography>
+            </Container>
+              </a>
+          
+        </Hidden>
+
+      </Grid>
+
+      <Grid item xs={2}>
+
       </Grid>
 
 

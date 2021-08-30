@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid, Typography } from '@material-ui/core';
+import { Container, Grid, Typography } from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
-import Navbar from '../navbar/navbar';
+import Navbar from '../navbar';
 import xsBanner from '../../assets/CPTS300.jpg';
 import smBanner from '../../assets/CPTS600.jpg';
 import mdBanner from '../../assets/CPTS960.jpg';
@@ -11,8 +11,10 @@ import lgBanner from '../../assets/CPTS1280.jpg';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    alignContent: 'center',
     background: '#24562B',
+  },
+  container: {
+    textAlign: 'right',
   },
   img: {
 
@@ -25,23 +27,24 @@ const useStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.only('sm')]: {
 
-      width: '100%',
       height: '200px',
+      width: '100%',
     },
     [theme.breakpoints.only('md')]: {
       display: 'block',
-      width: '100%',
       height: '200px',
+      width: '100%',
     },
     [theme.breakpoints.only('lg')]: {
       display: 'block',
-      width: '100%',
       height: '200px',
+      width: '100%',
     },
     [theme.breakpoints.only('xl')]: {
       display: 'block',
-      width: '100%',
       height: '200px',
+      paddingLeft: '10%',
+      width: '100%',
     }
   },
   typography: {
@@ -53,22 +56,29 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.only('sm')]: {
       color: 'white',
       fontSize: '30px',
+      textAlign: 'right',
     },
     [theme.breakpoints.only('md')]: {
       color: 'white',
       fontSize: '30px',
+      textAlign: 'right',
     },
     [theme.breakpoints.only('lg')]: {
       color: 'white',
       fontSize: '30px',
+      textAlign: 'right',
     },
     [theme.breakpoints.only('xl')]: {
       color: 'white',
+      display: 'block',
       fontSize: '30px',
+      textAlign: 'right',
     }
   },
   navTypo: {
     color: 'white',
+    display: 'block',
+    textAlign: 'right',
     fontSize: '20px',
   }
 }))
@@ -80,7 +90,7 @@ const Header = () => {
   return (
     <Grid container spacing={3} className={classes.root}>
       <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-        <Hidden smUp>
+        {/* <Hidden smUp>
           <a href="#top"><img className={classes.img} src={xsBanner} alt="South Puget Sound Community Partnership for Transition Services Logo" ></img></a>
         </Hidden>
         <Hidden only={['xs', 'md', 'lg', 'xl']}>
@@ -91,16 +101,26 @@ const Header = () => {
         </Hidden>
         <Hidden only={['xs', 'sm', 'md']}>
           <a href="#top"><img className={classes.img} src={lgBanner} alt="South Puget Sound Community Partnership for Transition Services Logo" ></img></a>
-        </Hidden>
-        {/* <Hidden only={['xs', 'sm', 'md', 'lg']}>
-        <a href="#top"><img className={classes.img} src={xlBanner} alt="South Puget Sound Community Partnership for Transition Services Logo" ></img></a>
         </Hidden> */}
+
       </Grid>
-      <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-        <Typography className={classes.typography}>Community Partnership for Transition Services</Typography>
-        <br />
-        <Typography className={classes.navTypo}>Navigation</Typography>
-        <Navbar />
+      <Grid item xs={12} sm={4}>
+        <Hidden only={'sm'}>
+      <a href="/"><img className={classes.img} src={smBanner} alt="South Puget Sound Community Partnership for Transition Services Logo" ></img></a>
+      </Hidden>
+      <Hidden only={['xs', 'md', 'lg', 'xl']}>
+      <a href="/"><img className={classes.img} src={xsBanner} alt="South Puget Sound Community Partnership for Transition Services Logo" ></img></a>
+      </Hidden>
+      </Grid>
+      <Grid item xs={12} sm={8} md={8} lg={8} xl={8}>
+        <Container>
+          <Typography className={classes.typography}><b>Community Partnership for Transition Services</b></Typography>
+
+          <Typography className={classes.navTypo}>Navigation</Typography>
+        </Container>
+        <Container className={classes.container}>
+          <Navbar />
+        </Container>
       </Grid>
     </Grid>
   );
