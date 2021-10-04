@@ -18,10 +18,16 @@ const GoogleMap = () => {
       libraries: ["places"]
     });
     loader.load().then(() => {
-      new google.maps.Map(document.getElementById("map"), {
+      const homeMarker = { lat: 47.02337814154326, lng: -122.92261575767108 }
+      const map = new google.maps.Map(document.getElementById("map"), {
         center: { lat: 47.036, lng: -122.898 },
-        zoom: 14,
+      
+        zoom: 13,
       });
+      new google.maps.Marker({
+        position: homeMarker,
+        map: map,
+      })
     })
     .catch(e => {
       console.log(e.message);
