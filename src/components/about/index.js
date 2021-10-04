@@ -83,7 +83,7 @@ const About = () => {
       </Grid>
 
       <Grid item xs={12}>
-        <Typography variant="h5">Other Community Partnership for TRansition Solution (CPTS) Groups</Typography>
+        <Typography variant="h5">Other Community Partnership for Transition Solution (CPTS) Groups</Typography>
         <Typography>The South Puget Sound CPTS is part of a larger network of CPTS groups throughout Washington State. Together, we work to help as many
           justice-involved Washingtonians as we can. You can learn more about our fellow CPTS groups below by visiting their websites.</Typography>
       </Grid>

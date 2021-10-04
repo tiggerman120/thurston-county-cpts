@@ -2,6 +2,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Button, Container, Grid, Typography } from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
 
+import GoogleMap from '../googlemap';
+
 import HomeIcon from '@material-ui/icons/Home';
 import AppleIcon from '@material-ui/icons/Apple';
 import PeopleIcon from '@material-ui/icons/People';
@@ -166,17 +168,17 @@ const Main = () => {
 
       </Grid>
 
-      <Grid item xs={2}>
+      <Grid item xs={4}>
+
+        <GoogleMap />
 
       </Grid>
 
-      <Grid item xs={2}>
-
-      </Grid>
+      
 
       <Grid item xs={4}>
         <Hidden mdUp>
-          <a href="/houseless" >
+          <a href="/housing" >
             <Container>
               <HomeIcon style={{ fontSize: '50px' }} />
               <Typography >Housing</Typography>
@@ -206,7 +208,7 @@ const Main = () => {
 
         <Hidden smDown>
           
-            <a href="/houseless">
+            <a href="/housing">
               <Container className={classes.linkContainer}>
                 <HomeIcon style={{ fontSize: '80px' }} />
                 <Typography >Housing</Typography>
