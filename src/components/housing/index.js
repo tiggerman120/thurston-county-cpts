@@ -433,6 +433,39 @@ const Housing = () => {
           </Container>
         </Container>
 
+        <Container className={classes.resourceContainer}>
+          <Typography className={classes.resourcesTypo}>Transitional Housing</Typography>
+          <Container className={classes.leftInnerResourceBox}>
+            <Typography><b><u>Organization</u></b></Typography>
+            <Typography>Fresh Start Housing</Typography>
+            <Typography><b><u>Address</u></b></Typography>
+            <Typography>3532 Mary Elder Rd. NE #1-11
+              Olympia, WA 98506
+            </Typography>
+            <Typography><b><u>Phone Number</u></b></Typography>
+            <Typography>(360) 481-6949 or (253) 332-2122</Typography>
+            <Typography><b><u>Website</u></b></Typography>
+            <a href="http://www.freshstarthousing.org/" target="_blank" rel="noreferrer">Link</a>
+          </Container>
+          <Container className={classes.rightInnerResourceBox}>
+            <Typography variant="h5"><b>Homeless Family Services</b></Typography>
+            <Typography><b><u>Who They Help</u></b></Typography>
+            <Typography className={classes.rightResourceBoxTypo}>Tenants range from:</Typography>
+            <Typography className={classes.rightResourceBoxTypo}>•	Formerly incarcerated</Typography>
+            <Typography className={classes.rightResourceBoxTypo}>•	People released from treatment programs</Typography>
+            <Typography className={classes.rightResourceBoxTypo}>•	Mental health outpatients</Typography>
+            <Typography className={classes.rightResourceBoxTypo}>•	Houseless people</Typography>
+            <Typography><b><u>How They Help</u></b></Typography>
+            <Typography>Fresh Start Housing provides:</Typography>
+            <Typography className={classes.rightResourceBoxTypo}>•	Furnished shared housing that is clean and sober</Typography>
+            <Typography className={classes.rightResourceBoxTypo}>•	Access to the internet, phone, and Netflix</Typography>
+            <Typography className={classes.rightResourceBoxTypo}>•	Case management and life-skills coaching</Typography>
+            <Typography className={classes.rightResourceBoxTypo}>•	Weekly group meetings and one-on-one meetings</Typography>
+            <Typography className={classes.rightResourceBoxTypo}>• <a href="https://assets.website-files.com/5823cde699878c937c69553a/5d49dcb715f2c1c77901f891_House%20Rules.pdf" target="_blank" rel="noreferrer">House rules</a> that must be followed</Typography>
+          </Container>
+        </Container>
+
+        
         <Container>
           <a href="#top"><Typography>Top of page</Typography></a>
         </Container>
