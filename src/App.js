@@ -13,7 +13,7 @@ import GoogleMap from './components/googlemap';
 import Header from './components/header';
 import Healthcare from './components/healthcare';
 import Homeless from './components/houseless';
-import Housing from './components/housing';
+import Housing from './components/housing/index';
 import Main from './components/main';
 import MentalHealth from './components/mentalhealth'
 import Resources from './components/resources';
