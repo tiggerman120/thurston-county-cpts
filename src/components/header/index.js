@@ -3,7 +3,8 @@ import { Container, Grid, Typography } from '@material-ui/core';
 import Hidden from '@material-ui/core/Hidden';
 import Navbar from '../navbar';
 import xsBanner from '../../assets/CPTS300.jpg';
-import smBanner from '../../assets/CPTS600.jpg';
+// import smBanner from '../../assets/CPTS600.jpg';
+import newBanner from '../../assets/SPS3.jpg';
 // import mdBanner from '../../assets/CPTS960.jpg';
 // import lgBanner from '../../assets/CPTS1280.jpg';
 // import xlBanner from '../../assets/CPTS1960.jpg';
@@ -106,7 +107,7 @@ const Header = () => {
       </Grid>
       <Grid item xs={12} sm={4}>
         <Hidden only={'sm'}>
-      <a href="/"><img className={classes.img} src={smBanner} alt="South Puget Sound Community Partnership for Transition Services Logo" ></img></a>
+      <a href="/"><img className={classes.img} src={newBanner} alt="South Puget Sound Community Partnership for Transition Services Logo" ></img></a>
       </Hidden>
       <Hidden only={['xs', 'md', 'lg', 'xl']}>
       <a href="/"><img className={classes.img} src={xsBanner} alt="South Puget Sound Community Partnership for Transition Services Logo" ></img></a>
