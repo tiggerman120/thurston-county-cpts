@@ -168,7 +168,7 @@ const Main = () => {
 
       </Grid>
 
-      <Grid item xs={4}>
+      <Grid item xs={2}>
 
         <GoogleMap />
 
