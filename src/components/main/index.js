@@ -168,13 +168,15 @@ const Main = () => {
 
       </Grid>
 
-      <Grid item xs={4}>
+      <Grid item xs={12}>
 
         <GoogleMap />
 
       </Grid>
 
-      
+      <Grid item xs={2}>
+        
+      </Grid>
 
       <Grid item xs={4}>
         <Hidden mdUp>
